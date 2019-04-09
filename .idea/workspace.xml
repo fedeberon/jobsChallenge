@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="553443a9-d214-44bb-9a8b-b155c7caec9e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jobsWithNode/api/dao/jobDao.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobsWithNode/.env" afterPath="$PROJECT_DIR$/jobsWithNode/.env" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobsWithNode/api/controllers/jobRequestController.js" afterPath="$PROJECT_DIR$/jobsWithNode/api/controllers/jobRequestController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobsWithNode/api/dao/databaseHelper.js" afterPath="$PROJECT_DIR$/jobsWithNode/api/dao/databaseHelper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobsWithNode/api/routes/jobRequestRoutes.js" afterPath="$PROJECT_DIR$/jobsWithNode/api/routes/jobRequestRoutes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobsWithNode/package-lock.json" afterPath="$PROJECT_DIR$/jobsWithNode/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobsWithNode/package.json" afterPath="$PROJECT_DIR$/jobsWithNode/package.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,11 +35,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jobRequestRoutes.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jobRequestRoutes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jobsWithNode/api/routes/jobRequestRoutes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2930">
+              <caret line="312" column="0" lean-forward="false" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,13 +115,13 @@
         <option value="$PROJECT_DIR$/jobsWithNode/serve.js" />
         <option value="$PROJECT_DIR$/jobsWithNode/api/controller/jobController.js" />
         <option value="$PROJECT_DIR$/jobsWithNode/server.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/jobsWithNode/.env" />
         <option value="$PROJECT_DIR$/jobsWithNode/api/dao/jobRepository.js" />
         <option value="$PROJECT_DIR$/jobsWithNode/api/routes/jobRequestRoutes.js" />
         <option value="$PROJECT_DIR$/jobsWithNode/api/controllers/jobRequestController.js" />
         <option value="$PROJECT_DIR$/jobsWithNode/api/dao/databaseHelper.js" />
         <option value="$PROJECT_DIR$/jobsWithNode/api/dao/jobDao.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -619,7 +636,7 @@
       <workItem from="1554750811032" duration="11000" />
       <workItem from="1554751036125" duration="1845000" />
       <workItem from="1554758262467" duration="5393000" />
-      <workItem from="1554770640849" duration="17909000" />
+      <workItem from="1554770640849" duration="18039000" />
     </task>
     <task id="LOCAL-00001" summary="* jobs&#10;* jobs with parameters">
       <created>1554836170074</created>
@@ -670,11 +687,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554837040498</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="resolve Node database">
+      <created>1554850473174</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1554850473174</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28095000" />
+    <option name="totallyTimeSpent" value="28225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="706" extended-state="0" />
@@ -747,7 +771,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="* jobs&#10;* jobs with parameters" />
     <MESSAGE value="Merge branch 'master' of github.com:fedeberon/jobsChallenge&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of github.com:fedeberon/jobsChallenge&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
+    <MESSAGE value="resolve Node database" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolve Node database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -760,14 +785,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jobs/artisan">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jobs/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1069,14 +1086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3375">
-          <caret line="225" column="11" lean-forward="false" selection-start-line="225" selection-start-column="11" selection-end-line="225" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jobsWithNode/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1165,6 +1174,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2930">
+          <caret line="312" column="0" lean-forward="false" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
           <folding />
         </state>
       </provider>
