@@ -13,4 +13,9 @@ class Defender extends MyJob
     {
         return Defender::$TYPE;
     }
+
+    function getSecondToProcess()
+    {
+        return 10;
+    }
 }

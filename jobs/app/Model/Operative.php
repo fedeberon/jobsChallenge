@@ -16,4 +16,8 @@ class Operative extends MyJob
         return Operative::$TYPE;
     }
 
+    function getSecondToProcess()
+    {
+        return 20;
+    }
 }

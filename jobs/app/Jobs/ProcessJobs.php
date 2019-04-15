@@ -43,7 +43,6 @@ class ProcessJobs implements ShouldQueue
         $this->myJob->status = 1;
         $this->myJob->queue = $this->job->getQueue();
         $this->myJob->job = $this->job->getJobId() . ' ' . $this->job->getName();
-        $this->myJob->queue = $this->job->getQueue();
         $this->myJob->save();
 
     }
