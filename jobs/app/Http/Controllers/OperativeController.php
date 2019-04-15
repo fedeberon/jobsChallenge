@@ -37,11 +37,17 @@ class OperativeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $operative = new Operative();
 
-        $operative = new Operative;
+        echo $operative;
+
+        if($request->name == null) return response()->json('El parametro $.name es obligatorio.', 422 );
 
         $operative->name = $request->name;
+
+        if($request->status != null )$operative->status = $request->status;
+
+        if($request->OS != null ) $operative->OS = $request->OS;
 
         $operative->save();
 

@@ -8,6 +8,21 @@ class Defender extends Job
 {
     //
 
+
+    public function __construct(array $attributes = array())
+    {
+        array_merge ($this->fillable, array(
+            'MALWARE'
+        ));
+
+        $this->setRawAttributes(array(
+            'MALWARE' => 'NO',
+        ), true);
+
+        parent::__construct($attributes);
+    }
+
+
     protected static function boot()
     {
         parent::boot();
