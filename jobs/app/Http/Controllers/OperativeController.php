@@ -46,9 +46,9 @@ class OperativeController extends Controller
 
         $token = $request->token;
 
-        $job = new ProcessJobs($operative);
+        ProcessJobs::dispatch($operative)
+            ->delay(now()->addSeconds($operative->getSecondToProcess()));
 
-        $this->dispatch($job);
 
         return $request->json('200','Job Operative was fire.');
     }
