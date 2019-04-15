@@ -2,37 +2,15 @@
 
 namespace App\Model;
 
-use App\Job;
-
-class Defender extends Job
+class Defender extends MyJob
 {
-    //
 
+    public static $TYPE = 'DEFENDER';
 
-    public function __construct(array $attributes = array())
+    protected $fillable = ['malware'];
+
+    function getType()
     {
-        array_merge ($this->fillable, array(
-            'MALWARE'
-        ));
-
-        $this->setRawAttributes(array(
-            'MALWARE' => 'NO',
-        ), true);
-
-        parent::__construct($attributes);
-    }
-
-
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::addGlobalScope('defender', function (Builder $builder) {
-            $builder->where('type', 'defender');
-        });
-
-        static::creating(function ($article) {
-            $article->type = 'defender';
-        });
+        return Defender::$TYPE;
     }
 }
