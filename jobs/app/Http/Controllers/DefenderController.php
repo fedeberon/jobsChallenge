@@ -45,7 +45,7 @@ class DefenderController extends Controller
 
         ProcessJobs::dispatch($defender)
             ->onQueue('low')
-            ->delay(now()->addSeconds(10));
+            ->delay(now()->addSeconds($defender->getSecondToProcess()));
 
         return $request->json('200','Job Defender was fire.');
     }

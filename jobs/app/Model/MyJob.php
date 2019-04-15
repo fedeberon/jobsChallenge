@@ -17,6 +17,8 @@ abstract class MyJob extends Model{
 
     abstract function getType();
 
+    abstract function getSecondToProcess();
+
     public $timestamps = false;
 
     const CREATED_AT = false;
