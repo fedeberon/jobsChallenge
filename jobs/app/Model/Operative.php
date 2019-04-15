@@ -2,23 +2,18 @@
 
 namespace App\Model;
 
-use App\Job;
-
-class Operative extends Job
+class Operative extends MyJob
 {
     //
 
-    protected static function boot()
+    private static $TYPE = 'OPERATIVE';
+
+    protected $fillable = ['name'];
+
+
+    function getType()
     {
-        parent::boot();
-
-        static::addGlobalScope('operative', function (Builder $builder) {
-            $builder->where('type', 'operative');
-        });
-
-        static::creating(function ($article) {
-            $article->type = 'operative';
-        });
+        return Operative::$TYPE;
     }
 
 }

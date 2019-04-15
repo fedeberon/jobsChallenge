@@ -1,29 +1,21 @@
-var databaseHelper = require('../dao/databaseHelper');
+var dao = require('../dao/jobDao');
 
-exports.getJobRequest = function(req, res) {
-    var tweetRequest = tweetRequests.find(tweetRequest => tweetRequest.id === req.params.jobRequestId);
-    res.json(tweetRequest);
-};
-
-
-
-exports.save = function(job, callback) {
-    var sqlQuery = "INSERT INTO jobs (name, startTime) VALUES ('" + job.name + "', 'sysdate')";
-    databaseHelper.doQuery(sqlQuery, function() {
-        callback();
+exports.get = function(req, res) {
+    var id = req.params.id;
+    console.log('en method with parameter ' + id);
+    dao.get(id, function(job) {
+        res.json(job);
     });
 };
 
-var tweetRequests = [{
-    id: '1',
-    device_token: '1',
-    hashtags: "#ios #swift"
-}, {
-    id: '2',
-    device_token: '2',
-    hashtags: "#android #kotlin"
-}, {
-    id: '3',
-    device_token: '3',
-    hashtags: "#backend #nodejs"
-}];
+
+exports.save = function(req, res) {
+   var job = {
+       name : req.body.name
+   };
+
+   dao.save(job, function () {
+       res.status(200).end();
+   })
+};
+

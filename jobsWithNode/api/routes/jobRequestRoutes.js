@@ -1,11 +1,10 @@
 module.exports = function(app) {
-    var tweetRequestController = require('../controllers/jobRequestController');
+    var jobRequestController = require('../controllers/jobRequestController');
 
-    app.route('/api/defender/:jobRequestId')
-        .get(tweetRequestController.getJobRequest);
+    app.route('/api/defender/:id/')
+        .get(jobRequestController.get);
 
     app.route('/api/defender/')
-        .post(tweetRequestController.save);
-
+        .post(jobRequestController.save);
 
 };

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\ProcessJobs;
 use App\Model\Defender;
 use Illuminate\Http\Request;
 
@@ -42,10 +43,11 @@ class DefenderController extends Controller
 
         $defender->name = $request->name;
 
-        $defender->save();
+        ProcessJobs::dispatch($defender)
+            ->onQueue('low')
+            ->delay(now()->addSeconds(10));
 
-        return $request->json('200','ok store Defender Job');
-
+        return $request->json('200','Job Defender was fire.');
     }
 
     /**
