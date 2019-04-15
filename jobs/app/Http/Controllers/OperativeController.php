@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\ProcessJobs;
 use App\Model\Operative;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class OperativeController extends Controller
 {
@@ -37,15 +37,20 @@ class OperativeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        if($request->name == null) return $request->json('402','Parameter $.name is required.');
 
         $operative = new Operative;
 
         $operative->name = $request->name;
 
-        $operative->save();
+        $token = $request->token;
 
-        return $request->json('200','ok store Operative Job');
+        $job = new ProcessJobs($operative);
+
+        $this->dispatch($job);
+
+        return $request->json('200','Job Operative was fire.');
     }
 
     /**
