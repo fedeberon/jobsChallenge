@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="553443a9-d214-44bb-9a8b-b155c7caec9e" name="Default" comment="">
+    <list default="true" id="553443a9-d214-44bb-9a8b-b155c7caec9e" name="Default" comment="Merge branch 'master' of https://github.com/fedeberon/jobsChallenge&#10;" />
+    <list id="2827c1f4-ed7b-4b98-876d-f2a24ce8b74b" name="New changelist" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/app/Http/Controllers/DefenderController.php" afterPath="$PROJECT_DIR$/jobs/app/Http/Controllers/DefenderController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/app/Http/Controllers/OperativeController.php" afterPath="$PROJECT_DIR$/jobs/app/Http/Controllers/OperativeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/app/Jobs/ProcessJobs.php" afterPath="$PROJECT_DIR$/jobs/app/Jobs/ProcessJobs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/app/Model/Defender.php" afterPath="$PROJECT_DIR$/jobs/app/Model/Defender.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/app/Model/MyJob.php" afterPath="$PROJECT_DIR$/jobs/app/Model/MyJob.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/app/Model/Operative.php" afterPath="$PROJECT_DIR$/jobs/app/Model/Operative.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/config/queue.php" afterPath="$PROJECT_DIR$/jobs/config/queue.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -849,6 +843,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="553443a9-d214-44bb-9a8b-b155c7caec9e" name="Default" comment="" />
+      <changelist id="2827c1f4-ed7b-4b98-876d-f2a24ce8b74b" name="New changelist" comment="" />
       <created>1554746190357</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -867,7 +862,7 @@
       <workItem from="1555266708826" duration="17075000" />
       <workItem from="1555291070382" duration="12316000" />
       <workItem from="1555333586662" duration="1941000" />
-      <workItem from="1555335687769" duration="2608000" />
+      <workItem from="1555335687769" duration="2964000" />
     </task>
     <task id="LOCAL-00001" summary="* jobs&#10;* jobs with parameters">
       <created>1554836170074</created>
@@ -939,11 +934,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555333623070</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Merge branch 'master' of https://github.com/fedeberon/jobsChallenge&#10;">
+      <created>1555338457661</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1555338457661</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128006000" />
+    <option name="totallyTimeSpent" value="128362000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -956,10 +958,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41130298" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55259025" sideWeight="0.496875" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5" sideWeight="0.49375" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22082019" sideWeight="0.496875" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5" sideWeight="0.49375" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30599368" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30599368" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20863836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19619326" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1053,6 +1055,7 @@
     <MESSAGE value="resolve Node database" />
     <MESSAGE value="Merge branch 'master' of https://github.com/fedeberon/jobsChallenge&#10;" />
     <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/fedeberon/jobsChallenge&#10;" />
+    <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
