@@ -29,6 +29,7 @@ class ProcessJobs implements ShouldQueue
         $this->myJob->attempts = 1;
         $this->myJob->queue = 'in process';
         $this->myJob->job = 'in process';
+        $this->delay = now()->addSecond($this->myJob->getSecondToProcess());
         $this->myJob->save();
 
     }

@@ -8,16 +8,29 @@ class Operative extends MyJob
 
     private static $TYPE = 'OPERATIVE';
 
-    protected $fillable = ['name'];
-
+    protected $fillable = ['name', 'origin','duration', 'mode'];
 
     function getType()
     {
         return Operative::$TYPE;
     }
 
+    protected $defaults = array(
+        'origin' => "not specified",
+        'mode' => "under"
+    );
+
+    public function __construct(array $attributes = array())
+    {
+        $this->setRawAttributes($this->defaults, true);
+        parent::__construct($attributes);
+    }
+
     function getSecondToProcess()
     {
-        return 20;
+        if(is_null($this->duration)){
+            $this->duration = ($this->mode == "main") ? 5 : 15 ;
+        }
+        return $this->duration;
     }
 }

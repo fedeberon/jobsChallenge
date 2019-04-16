@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Jobs\ProcessJobs;
 use App\Model\Operative;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Validator;
 
 class OperativeController extends Controller
 {
@@ -37,20 +39,20 @@ class OperativeController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required'
+        ]);
 
-        if($request->name == null) return $request->json('402','Parameter $.name is required.');
+        if ($validator->fails()) {
+            return response()->json($validator->messages(), Response::HTTP_BAD_REQUEST);
+        }
 
-        $operative = new Operative;
-
-        $operative->name = $request->name;
-
-        $token = $request->token;
-
+        $operative = new Operative($request->all());
         ProcessJobs::dispatch($operative)
+            ->onQueue('low')
             ->delay(now()->addSeconds($operative->getSecondToProcess()));
 
-
-        return $request->json('200','Job Operative was fire.');
+        return $request->json(Response::HTTP_ACCEPTED,$operative);
     }
 
     /**

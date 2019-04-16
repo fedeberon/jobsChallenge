@@ -18,10 +18,14 @@ class CreateJobsEventsTable extends Migration
             $table->string('queue')->index();
             $table->string('name');
             $table->string('job');
+            $table->string('duration');
             $table->timestamp('start')->default(\Carbon\Carbon::now());
             $table->timestamp('finish')->nullable();
             $table->integer('status');
             $table->unsignedTinyInteger('attempts');
+            $table->string('origin');
+            $table->string('mode');
+
         });
 
     }
