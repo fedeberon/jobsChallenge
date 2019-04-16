@@ -22,3 +22,5 @@ Route::resource('operative', 'OperativeController');
 
 
 Route::resource('defender', 'DefenderController');
+
+Route::get('defender/list/{fromDateTime}/{toDateTime}','DefenderController@findBetweenDateTimes');

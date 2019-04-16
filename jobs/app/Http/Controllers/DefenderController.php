@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Jobs\ProcessJobs;
 use App\Model\Defender;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class DefenderController extends Controller
 {
@@ -13,6 +15,17 @@ class DefenderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function findBetweenDateTimes(Request $request){
+        $from = Carbon::parse($request->fromDateTime);
+        $to = Carbon::parse($request->toDateTime);
+
+        $job = Defender::whereBetween('start', [$from, $to])->get();
+
+        request()->json($job , 200);
+    }
+
+
     public function index()
     {
         //
