@@ -10,7 +10,7 @@ class Defender extends MyJob
     protected $fillable = [ 'name', 'fullscan', 'duration', 'finish' , 'queue', 'job'];
 
     protected $defaults = array(
-        'fullscan' => false,
+        'fullscan' => true,
     );
 
     public function __construct(array $attributes = array())
