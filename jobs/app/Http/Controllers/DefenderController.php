@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 
 class DefenderController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      *
@@ -43,9 +45,12 @@ class DefenderController extends Controller
 
         $defender->name = $request->name;
 
+
         ProcessJobs::dispatch($defender)
             ->onQueue('low')
             ->delay(now()->addSeconds($defender->getSecondToProcess()));
+
+
 
         return $request->json('200','Job Defender was fire.');
     }
