@@ -7,7 +7,17 @@ class Defender extends MyJob
 
     public static $TYPE = 'DEFENDER';
 
-    protected $fillable = ['malware'];
+    protected $fillable = [ 'name', 'fullscan', 'duration', 'finish' , 'queue', 'job'];
+
+    protected $defaults = array(
+        'fullscan' => false,
+    );
+
+    public function __construct(array $attributes = array())
+    {
+        $this->setRawAttributes($this->defaults, true);
+        parent::__construct($attributes);
+    }
 
     function getType()
     {
@@ -16,6 +26,9 @@ class Defender extends MyJob
 
     function getSecondToProcess()
     {
-        return 10;
+        if(is_null($this->duration)){
+            $this->duration = $this->fullscan ? 5 : 10 ;
+        }
+        return $this->duration;
     }
 }
