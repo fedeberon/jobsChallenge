@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Jobs\ProcessJobs;
 use App\Model\Defender;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
+
 
 class DefenderController extends Controller
 {
@@ -42,7 +44,7 @@ class DefenderController extends Controller
             ->onQueue('low')
             ->delay(now()->addSeconds($defender->getSecondToProcess()));
 
-        return $request->json(Response::HTTP_ACCEPTED,$defender);
+        return $request->json(Response::HTTP_ACCEPTED, $defender);
     }
 
     /**

@@ -35,7 +35,7 @@ class Operative extends MyJob
         });
 
         static::creating(function ($article) {
-            $article->model = 'operative';
+            $article->type = 'operative';
         });
     }
 

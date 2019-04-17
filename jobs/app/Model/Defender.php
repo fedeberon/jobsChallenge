@@ -28,7 +28,7 @@ class Defender extends MyJob
         });
 
         static::creating(function ($article) {
-            $article->model = 'defender';
+            $article->type = 'defender';
         });
     }
 

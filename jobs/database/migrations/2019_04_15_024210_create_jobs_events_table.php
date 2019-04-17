@@ -19,13 +19,14 @@ class CreateJobsEventsTable extends Migration
             $table->string('name');
             $table->string('job');
             $table->string('duration');
-            $table->boolean('fullscan');
+            $table->boolean('fullscan')->nullable();
+            $table->string('type');
             $table->timestamp('start')->default(\Carbon\Carbon::now());
             $table->timestamp('finish')->nullable();
             $table->integer('status');
             $table->unsignedTinyInteger('attempts');
-            $table->string('origin');
-            $table->string('mode');
+            $table->string('origin')->nullable();
+            $table->string('mode')->nullable();
 
         });
 
