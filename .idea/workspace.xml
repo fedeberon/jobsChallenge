@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="553443a9-d214-44bb-9a8b-b155c7caec9e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/app/Http/Controllers/DefenderController.php" afterPath="$PROJECT_DIR$/jobs/app/Http/Controllers/DefenderController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/app/Http/Middleware/JWT.php" afterPath="$PROJECT_DIR$/jobs/app/Http/Middleware/JWT.php" />
     </list>
-    <list id="2827c1f4-ed7b-4b98-876d-f2a24ce8b74b" name="New changelist" comment="" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,37 +21,12 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="jobsChallenge@127.0.0.1" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="jobsChallenge@127.0.0.1" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="jobsChallenge" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -58,119 +34,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JobEvent.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jobs/app/Model/JobEvent.php">
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jobs/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="227">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProcessJobs.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jobs/app/Jobs/ProcessJobs.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-              <folding>
-                <element signature="e#28#48#0#PHP" expanded="true" />
-                <marker date="1555341948000" expanded="true" signature="288:1060" ph="{...}" />
-                <marker date="1555341948000" expanded="true" signature="843:1056" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefenderController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DefenderController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jobs/app/Http/Controllers/DefenderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="43" column="40" lean-forward="false" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+            <state relative-caret-position="102">
+              <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
               <folding>
                 <element signature="e#40#65#0#PHP" expanded="true" />
-                <marker date="1555341948000" expanded="true" signature="163:2028" ph="{...}" />
-                <marker date="1555341948000" expanded="true" signature="756:1065" ph="{...}" />
-                <marker date="1555341948000" expanded="true" signature="1074:1207" ph=" Display the specified resource. ..." />
-                <marker date="1555341948000" expanded="true" signature="1254:1277" ph="{...}" />
-                <marker date="1555341948000" expanded="true" signature="1286:1437" ph=" Show the form for editing the specified resource. ..." />
-                <marker date="1555341948000" expanded="true" signature="1484:1507" ph="{...}" />
-                <marker date="1555341948000" expanded="true" signature="1516:1709" ph=" Update the specified resource in storage. ..." />
-                <marker date="1555341948000" expanded="true" signature="1776:1799" ph="{...}" />
-                <marker date="1555341948000" expanded="true" signature="1808:1953" ph=" Remove the specified resource from storage. ..." />
-                <marker date="1555341948000" expanded="true" signature="2003:2026" ph="{...}" />
+                <marker date="1555511859944" expanded="true" signature="605:630" ph="select * fro... jobs_events" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="queue.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jobs/config/queue.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1108">
-              <caret line="84" column="33" lean-forward="false" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
-              <folding>
-                <marker date="1555341948000" expanded="true" signature="15:2656" ph="..." />
-                <marker date="1555341948000" expanded="true" signature="514:1016" ph="..." />
-                <marker date="1555341948000" expanded="true" signature="1042:2102" ph="..." />
-                <marker date="1555341948000" expanded="true" signature="1063:1105" ph="..." />
-                <marker date="1555341948000" expanded="true" signature="1132:1275" ph="..." />
-                <marker date="1555341948000" expanded="true" signature="1305:1484" ph="..." />
-                <marker date="1555341948000" expanded="true" signature="1506:1869" ph="..." />
-                <marker date="1555341948000" expanded="true" signature="1893:2094" ph="..." />
-                <marker date="1555341948000" expanded="true" signature="2112:2539" ph="..." />
-                <marker date="1555341948000" expanded="true" signature="2560:2652" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Defender.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jobs/app/Model/Defender.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Operative.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jobs/app/Model/Operative.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PendingDispatch.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Foundation/Bus/PendingDispatch.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cf4b7f6d-b80a-4bdf-82ab-f4009a9a8135/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="314" column="9" lean-forward="false" selection-start-line="314" selection-start-column="9" selection-end-line="314" selection-end-column="9" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -210,8 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/workQueue/src/Controller/JobRestController.php" />
-        <option value="$PROJECT_DIR$/workQueue/config/bundles.php" />
         <option value="$PROJECT_DIR$/workQueue/.env" />
         <option value="$PROJECT_DIR$/workQueue/src/Entity/Job.php" />
         <option value="$PROJECT_DIR$/workQueue/src/Entity/Queue.php" />
@@ -252,15 +132,17 @@
         <option value="$PROJECT_DIR$/jobs/app/Model/JobEvent.php" />
         <option value="$PROJECT_DIR$/jobs/database/migrations/2019_04_15_024210_create_jobs_events_table.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cf4b7f6d-b80a-4bdf-82ab-f4009a9a8135/console.sql" />
-        <option value="$PROJECT_DIR$/jobs/app/Model/MyJob.php" />
         <option value="$PROJECT_DIR$/jobs/app/Model/Defender.php" />
         <option value="$PROJECT_DIR$/jobs/app/Model/Operative.php" />
-        <option value="$PROJECT_DIR$/jobs/app/Http/Controllers/DefenderController.php" />
         <option value="$PROJECT_DIR$/jobs/.env" />
         <option value="$PROJECT_DIR$/jobs/app/Jobs/ProcessJobs.php" />
         <option value="$PROJECT_DIR$/jobs/app/Http/Controllers/OperativeController.php" />
         <option value="$PROJECT_DIR$/jobs/config/queue.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/38f7b4af-3ac8-413f-b095-709eaa2c439a/console.sql" />
+        <option value="$PROJECT_DIR$/jobs/routes/api.php" />
+        <option value="$PROJECT_DIR$/jobs/app/Http/Middleware/JWT.php" />
+        <option value="$PROJECT_DIR$/jobs/app/Model/MyJob.php" />
+        <option value="$PROJECT_DIR$/jobs/app/Http/Controllers/DefenderController.php" />
       </list>
     </option>
   </component>
@@ -270,7 +152,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/jobs/node_modules" />
     <handled-path value="$PROJECT_DIR$/jobsWithNode/node_modules" />
   </component>
   <component name="PhpServers">
@@ -278,9 +168,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="706" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -310,6 +201,16 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -325,23 +226,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jobsChanllenge" />
+              <option name="myItemId" value="jobsChallenge" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jobsChanllenge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -352,7 +249,7 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="queu&#9;FILE&#9;file://C:/Users/Damian Gallego/IdeaProjects/jobsChallenge/jobs/config/queue.php&#10;control&#9;FILE&#9;file://C:/Users/Damian Gallego/IdeaProjects/jobsChallenge/jobs/app/Http/Controllers/OperativeController.php&#10;proce&#9;FILE&#9;file://C:/Users/Damian Gallego/IdeaProjects/jobsChallenge/jobs/app/Jobs/ProcessJobs.php&#10;que&#9;FILE&#9;file://C:/Users/Damian Gallego/IdeaProjects/jobsChallenge/jobs/config/queue.php&#10;QUEU&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/config/queue.php&#10;operat&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/Operative.php&#10;defe&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/Defender.php&#10;contro&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Http/Controllers/DefenderController.php&#10;jobeve&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/JobEvent.php&#10;queue&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/config/queue.php&#10;my&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/MyJob.php&#10;myjo&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/MyJob.php&#10;My&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/MyJob.php&#10;defende&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Http/Controllers/DefenderController.php&#10;Job&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/vendor/laravel/framework/src/Illuminate/Queue/Jobs/Job.php&#10;defender&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Http/Controllers/DefenderController.php&#10;pro&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Jobs/ProcessWork.php&#10;jobe&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/JobEvent.php&#10;jobeven&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/JobEvent.php&#10;job&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/JobEvent.php&#10;jo&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/JobEvent.php&#10;jobev&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/JobEvent.php&#10;queue.php&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/config/queue.php&#10;OPERATCON&#9;null&#9;null&#10;composer&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/composer.json&#10;api&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/routes/api.php&#10;defendecon&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Http/Controllers/DefenderController.php&#10;ProcessJob&#9;null&#9;null&#10;job.php&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Job.php&#10;web&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/works/routes/web.php&#10;jobcontr&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/works/app/Http/Controllers/JobController.php&#10;ind&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/works/public/index.php&#10;jocon&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/works/app/Http/Controllers/JobController.php&#10;autolo&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/works/vendor/autoload.php&#10;we&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/works/routes/web.php&#10;JOb&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Job.php&#10;service&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/workQueue/config/services.yaml&#10;bun&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/workQueue/config/bundles.php&#10;service.yam&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/workQueue/config/services.yaml&#10;api.php&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/routes/api.php&#10;JobCon&#9;null&#9;null&#10;appser&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Providers/AppServiceProvider.php&#10;QueueManager&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/vendor/laravel/framework/src/Illuminate/Queue/QueueManager.php&#10;work.php&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/vendor/laravel/framework/src/Illuminate/Queue/Worker.php" />
+    <property name="SearchEverywhereHistoryKey" value="defe&#9;FILE&#9;file://C:/Users/erwin/jobsChallenge/jobs/app/Http/Controllers/DefenderController.php&#10;auth.php&#9;FILE&#9;file://C:/Users/erwin/jobsChallenge/jobs/config/auth.php&#10;api&#9;FILE&#9;file://C:/Users/erwin/jobsChallenge/jobs/routes/api.php&#10;authcon&#9;null&#9;null&#10;MyJ&#9;FILE&#9;file://C:/Users/erwin/jobsChallenge/jobs/app/Model/MyJob.php&#10;MyJo&#9;FILE&#9;file://C:/Users/erwin/jobsChallenge/jobs/app/Model/MyJob.php&#10;queu&#9;FILE&#9;file://C:/Users/Damian Gallego/IdeaProjects/jobsChallenge/jobs/config/queue.php&#10;control&#9;FILE&#9;file://C:/Users/Damian Gallego/IdeaProjects/jobsChallenge/jobs/app/Http/Controllers/OperativeController.php&#10;proce&#9;FILE&#9;file://C:/Users/Damian Gallego/IdeaProjects/jobsChallenge/jobs/app/Jobs/ProcessJobs.php&#10;que&#9;FILE&#9;file://C:/Users/Damian Gallego/IdeaProjects/jobsChallenge/jobs/config/queue.php&#10;QUEU&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/config/queue.php&#10;operat&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/Operative.php&#10;contro&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Http/Controllers/DefenderController.php&#10;jobeve&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/JobEvent.php&#10;queue&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/config/queue.php&#10;my&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/MyJob.php&#10;myjo&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/MyJob.php&#10;My&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/MyJob.php&#10;defende&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Http/Controllers/DefenderController.php&#10;Job&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/vendor/laravel/framework/src/Illuminate/Queue/Jobs/Job.php&#10;defender&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Http/Controllers/DefenderController.php&#10;pro&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Jobs/ProcessWork.php&#10;jobe&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/JobEvent.php&#10;jobeven&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/JobEvent.php&#10;job&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/JobEvent.php&#10;jo&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/JobEvent.php&#10;jobev&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Model/JobEvent.php&#10;queue.php&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/config/queue.php&#10;OPERATCON&#9;null&#9;null&#10;composer&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/composer.json&#10;defendecon&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Http/Controllers/DefenderController.php&#10;ProcessJob&#9;null&#9;null&#10;job.php&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Job.php&#10;web&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/works/routes/web.php&#10;jobcontr&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/works/app/Http/Controllers/JobController.php&#10;ind&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/works/public/index.php&#10;jocon&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/works/app/Http/Controllers/JobController.php&#10;autolo&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/works/vendor/autoload.php&#10;we&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/works/routes/web.php&#10;JOb&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Job.php&#10;service&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/workQueue/config/services.yaml&#10;bun&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/workQueue/config/bundles.php&#10;service.yam&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/workQueue/config/services.yaml&#10;api.php&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/routes/api.php&#10;JobCon&#9;null&#9;null&#10;appser&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/app/Providers/AppServiceProvider.php&#10;QueueManager&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/vendor/laravel/framework/src/Illuminate/Queue/QueueManager.php&#10;work.php&#9;FILE&#9;file:///Users/federicoberon/Desarrollo/jobsChanllenge/jobs/vendor/laravel/framework/src/Illuminate/Queue/Worker.php" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="editorconfig.notification" value="spaces" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
@@ -391,7 +288,7 @@
       <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -401,7 +298,7 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Java" />
@@ -409,11 +306,7 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -438,11 +331,7 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <method />
     </configuration>
@@ -620,7 +509,6 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
-      <setting name="launchBrowserUrl" value="" />
       <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
@@ -637,6 +525,27 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -744,6 +653,34 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -754,7 +691,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
+      <command value="run-script" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
@@ -774,7 +711,7 @@
         <item index="0" class="java.lang.String" itemvalue="PHP Script.Task.php" />
       </list>
     </recent_temporary>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -784,7 +721,7 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Java" />
@@ -792,7 +729,11 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -808,7 +749,6 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="553443a9-d214-44bb-9a8b-b155c7caec9e" name="Default" comment="" />
-      <changelist id="2827c1f4-ed7b-4b98-876d-f2a24ce8b74b" name="New changelist" comment="" />
       <created>1554746190357</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -828,6 +768,7 @@
       <workItem from="1555291070382" duration="12316000" />
       <workItem from="1555333586662" duration="1941000" />
       <workItem from="1555335687769" duration="2964000" />
+      <workItem from="1555506866173" duration="4433000" />
     </task>
     <task id="LOCAL-00001" summary="* jobs&#10;* jobs with parameters">
       <created>1554836170074</created>
@@ -906,70 +847,53 @@
       <option name="project" value="LOCAL" />
       <updated>1555338457661</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Merge branch 'develop' of github.com:fedeberon/jobsChallenge into 7&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;jobs/routes/api.php&#10;">
+      <created>1555450654043</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1555450654043</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128371000" />
+    <option name="totallyTimeSpent" value="137522000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="706" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41130298" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6324921" sideWeight="0.2693997" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55259025" sideWeight="0.496875" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22239748" sideWeight="0.7306003" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.196875" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23572475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11859444" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55259025" sideWeight="0.496875" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4568289" sideWeight="0.49375" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6012559" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2359375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41130298" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19619326" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22082019" sideWeight="0.496875" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5" sideWeight="0.49375" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30599368" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20863836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6012559" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -977,13 +901,13 @@
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41130298" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6324921" sideWeight="0.2693997" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19619326" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11859444" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -996,9 +920,9 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55259025" sideWeight="0.496875" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5" sideWeight="0.49375" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45425868" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20863836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6324921" sideWeight="0.7306003" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6012559" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23572475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1043,7 +967,8 @@
     <MESSAGE value="Merge branch 'master' of github.com:fedeberon/jobsChallenge&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
     <MESSAGE value="resolve Node database" />
     <MESSAGE value="Merge branch 'master' of https://github.com/fedeberon/jobsChallenge&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/fedeberon/jobsChallenge&#10;" />
+    <MESSAGE value="Merge branch 'develop' of github.com:fedeberon/jobsChallenge into 7&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;jobs/routes/api.php&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'develop' of github.com:fedeberon/jobsChallenge into 7&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;jobs/routes/api.php&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1056,85 +981,56 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Queue/Queue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1043">
-          <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/works/vendor/laravel/framework/src/Illuminate/Foundation/Bus/Dispatchable.php" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="314" column="9" lean-forward="false" selection-start-line="314" selection-start-column="9" selection-end-line="314" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jobs/app/Jobs/ProcessJob.php" />
-    <entry file="file://$PROJECT_DIR$/works/app/Job.php" />
-    <entry file="file://$PROJECT_DIR$/jobs/app/Model/JobLifeCycle.php" />
-    <entry file="file://$PROJECT_DIR$/jobs/app/Job.php" />
-    <entry file="file://$PROJECT_DIR$/works/app/Enums/State.php" />
-    <entry file="file://$PROJECT_DIR$/works/composer.json" />
     <entry file="file://$PROJECT_DIR$/works/app/Jobs/ProcessJob.php" />
     <entry file="file://$PROJECT_DIR$/jobs/app/Jobs/JobProcess.php" />
     <entry file="file://$PROJECT_DIR$/jobs/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-238">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Contracts/Queue/ShouldQueue.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4530">
-          <caret line="304" column="0" lean-forward="false" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
+          <caret line="304" column="0" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/database/migrations/2019_04_14_145415_create_jobs_life_cycle_table.php" />
     <entry file="file://$PROJECT_DIR$/jobs/database/migrations/2019_04_14_123157_create_jobs_table.php" />
-    <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="42" column="14" lean-forward="false" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14580">
-          <caret line="972" column="0" lean-forward="false" selection-start-line="972" selection-start-column="0" selection-end-line="972" selection-end-column="0" />
+          <caret line="972" column="0" selection-start-line="972" selection-start-column="0" selection-end-line="972" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/vendor/nesbot/carbon/src/Carbon/Traits/Creator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3645">
-          <caret line="243" column="0" lean-forward="false" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
+          <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Bus/Queueable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1816">
-          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1144,14 +1040,14 @@
     <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Support/InteractsWithTime.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-435">
-          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Queue/Jobs/DatabaseJob.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-46">
-          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1159,28 +1055,21 @@
     <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Queue/Jobs/Job.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jobs/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/database/migrations/2014_10_12_100000_create_password_resets_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/database/migrations/2019_04_15_020020_create_failed_jobs_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1188,58 +1077,50 @@
     <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Contracts/Queue/Job.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
-          <caret line="145" column="7" lean-forward="false" selection-start-line="145" selection-start-column="7" selection-end-line="145" selection-end-column="7" />
+          <caret line="145" column="7" selection-start-line="145" selection-start-column="7" selection-end-line="145" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/vendor/nesbot/carbon/src/Carbon/Carbon.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-179">
-          <caret line="238" column="96" lean-forward="false" selection-start-line="238" selection-start-column="96" selection-end-line="238" selection-end-column="96" />
+          <caret line="238" column="96" selection-start-line="238" selection-start-column="96" selection-end-line="238" selection-end-column="96" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/database/migrations/2014_10_12_000000_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-133">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/database/migrations/2019_04_15_032508_create_jobs_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-130">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/database/migrations/2019_04_15_024210_create_jobs_events_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
-          <caret line="21" column="52" lean-forward="false" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/app/Model/JobEvent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cf4b7f6d-b80a-4bdf-82ab-f4009a9a8135/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cf4b7f6d-b80a-4bdf-82ab-f4009a9a8135/console.sql" />
     <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Foundation/Bus/PendingDispatch.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
-          <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1247,40 +1128,23 @@
     <entry file="file://$PROJECT_DIR$/jobs/app/Model/Operative.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding />
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Foundation/Bus/Dispatchable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
-          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jobs/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jobs/app/Model/MyJob.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="40" />
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/app/Jobs/ProcessJobs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
           <folding>
-            <element signature="e#28#48#0#PHP" expanded="true" />
-            <marker date="1555341948000" expanded="true" signature="288:1060" ph="{...}" />
-            <marker date="1555341948000" expanded="true" signature="843:1056" ph="{...}" />
+            <element signature="e#28#48#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1288,35 +1152,7 @@
     <entry file="file://$PROJECT_DIR$/jobs/app/Http/Controllers/OperativeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jobs/app/Http/Controllers/DefenderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="43" column="40" lean-forward="false" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-          <folding>
-            <element signature="e#40#65#0#PHP" expanded="true" />
-            <marker date="1555341948000" expanded="true" signature="163:2028" ph="{...}" />
-            <marker date="1555341948000" expanded="true" signature="756:1065" ph="{...}" />
-            <marker date="1555341948000" expanded="true" signature="1074:1207" ph=" Display the specified resource. ..." />
-            <marker date="1555341948000" expanded="true" signature="1254:1277" ph="{...}" />
-            <marker date="1555341948000" expanded="true" signature="1286:1437" ph=" Show the form for editing the specified resource. ..." />
-            <marker date="1555341948000" expanded="true" signature="1484:1507" ph="{...}" />
-            <marker date="1555341948000" expanded="true" signature="1516:1709" ph=" Update the specified resource in storage. ..." />
-            <marker date="1555341948000" expanded="true" signature="1776:1799" ph="{...}" />
-            <marker date="1555341948000" expanded="true" signature="1808:1953" ph=" Remove the specified resource from storage. ..." />
-            <marker date="1555341948000" expanded="true" signature="2003:2026" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jobs/app/Model/Defender.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1324,25 +1160,138 @@
     <entry file="file://$PROJECT_DIR$/jobs/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="16" />
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/config/queue.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1108">
-          <caret line="84" column="33" lean-forward="false" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
+          <caret line="84" column="33" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/vendor/symfony/debug/Exception/FatalThrowableError.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2193">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/config/jwt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="2429" column="44" selection-start-line="2429" selection-start-column="38" selection-end-line="2429" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="227" column="50" selection-start-line="227" selection-start-column="50" selection-end-line="227" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/app/Http/Middleware/JWT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <marker date="1555341948000" expanded="true" signature="15:2656" ph="..." />
-            <marker date="1555341948000" expanded="true" signature="514:1016" ph="..." />
-            <marker date="1555341948000" expanded="true" signature="1042:2102" ph="..." />
-            <marker date="1555341948000" expanded="true" signature="1063:1105" ph="..." />
-            <marker date="1555341948000" expanded="true" signature="1132:1275" ph="..." />
-            <marker date="1555341948000" expanded="true" signature="1305:1484" ph="..." />
-            <marker date="1555341948000" expanded="true" signature="1506:1869" ph="..." />
-            <marker date="1555341948000" expanded="true" signature="1893:2094" ph="..." />
-            <marker date="1555341948000" expanded="true" signature="2112:2539" ph="..." />
-            <marker date="1555341948000" expanded="true" signature="2560:2652" ph="..." />
+            <element signature="e#39#51#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/app/Model/Defender.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/vendor/laravel/framework/src/Illuminate/Support/Facades/DB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/app/Model/MyJob.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/database/seeds/UsersTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="19" column="48" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/app/Http/Controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/config/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jobs/app/Http/Controllers/DefenderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+          <folding>
+            <element signature="e#40#65#0#PHP" expanded="true" />
+            <marker date="1555511859944" expanded="true" signature="605:630" ph="select * fro... jobs_events" />
           </folding>
         </state>
       </provider>
