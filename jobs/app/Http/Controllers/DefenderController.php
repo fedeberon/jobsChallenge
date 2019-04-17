@@ -10,6 +10,8 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Symfony\Component\HttpFoundation\Response;
+
 
 class DefenderController extends Controller
 {
@@ -60,7 +62,7 @@ class DefenderController extends Controller
             ->onQueue('low')
             ->delay(now()->addSeconds($defender->getSecondToProcess()));
 
-        return $request->json(Response::HTTP_ACCEPTED,$defender);
+        return $request->json(Response::HTTP_ACCEPTED, $defender);
     }
 
     /**
