@@ -26,6 +26,19 @@ class Operative extends MyJob
         parent::__construct($attributes);
     }
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope('operative', function (Builder $builder) {
+            $builder->where('type', 'operative');
+        });
+
+        static::creating(function ($article) {
+            $article->model = 'operative';
+        });
+    }
+
     function getSecondToProcess()
     {
         if(is_null($this->duration)){

@@ -19,6 +19,20 @@ class Defender extends MyJob
         parent::__construct($attributes);
     }
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope('defender', function (Builder $builder) {
+            $builder->where('type', 'defender');
+        });
+
+        static::creating(function ($article) {
+            $article->model = 'defender';
+        });
+    }
+
+
     function getType()
     {
         return Defender::$TYPE;
