@@ -60,7 +60,7 @@ class DefenderController extends Controller
             ->onQueue('low')
             ->delay(now()->addSeconds($defender->getSecondToProcess()));
 
-        return $request->json('200', 'Job Defender was fire.');
+        return $request->json(Response::HTTP_ACCEPTED,$defender);
     }
 
     /**

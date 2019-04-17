@@ -13,7 +13,6 @@ use Illuminate\Database\Eloquent\Model;
 
 abstract class MyJob extends Model{
 
-    //Variable queue si viene por aparametro meta el queue por default.
     protected $table = "jobs_events";
 
     abstract function getType();
