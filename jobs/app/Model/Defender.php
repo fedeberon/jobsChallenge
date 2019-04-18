@@ -2,22 +2,48 @@
 
 namespace App\Model;
 
-use App\Job;
-
-class Defender extends Job
+class Defender extends MyJob
 {
-    //
 
-    protected static function boot()
+    public static $TYPE = 'DEFENDER';
+
+    protected $fillable = [ 'name', 'fullscan', 'duration', 'finish' , 'queue', 'job'];
+
+    protected $defaults = array(
+        'fullscan' => false,
+        'type' => 'defender',
+    );
+
+    public function __construct(array $attributes = array())
     {
-        parent::boot();
+        $this->setRawAttributes($this->defaults, true);
+        parent::__construct($attributes);
+    }
 
-        static::addGlobalScope('defender', function (Builder $builder) {
-            $builder->where('type', 'defender');
-        });
+//    protected static function boot()
+//    {
+//        parent::boot();
+//
+//        static::addGlobalScope('defender', function (Builder $builder) {
+//            $builder->where('type', 'defender');
+//        });
+//
+//        static::creating(function ($article) {
+//            $article->type = 'defender';
+//        });
+//    }
 
-        static::creating(function ($article) {
-            $article->type = 'defender';
-        });
+
+    function getType()
+    {
+        return Defender::$TYPE;
+    }
+
+    function getSecondToProcess()
+    {
+        if(is_null($this->duration)){
+            $this->duration = $this->fullscan ? 5 : 10 ;
+        }
+        return $this->duration;
     }
 }

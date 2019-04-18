@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Application;
+use App\Jobs\ProcessJobs;
 use App\Model\Defender;
+use App\Model\Operative;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
+
 
 class DefenderController extends Controller
 {
@@ -12,10 +17,23 @@ class DefenderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function findBetweenDateTimes(Request $request){
+//        $from = Carbon::parse($request->fromDateTime);
+//        $to = Carbon::parse($request->toDateTime);
+
+        $job = new Operative;
+
+      return request()->json(new Operative , 200);
+    }
+
+
     public function index()
     {
-        //
-        return response()->json('Defender Index!', 200 );
+         return response()->json('Defender Index!', 200 );
+
+//        $applications=Defender::orderBy('id','DESC')->paginate(3);
+//        return request()->json(200, $applications);
     }
 
     /**
@@ -36,16 +54,12 @@ class DefenderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $defender = new Defender($request->all());
+        ProcessJobs::dispatch($defender)
+            ->onQueue('low')
+            ->delay(now()->addSeconds($defender->getSecondToProcess()));
 
-        $defender = new Defender;
-
-        $defender->name = $request->name;
-
-        $defender->save();
-
-        return $request->json('200','ok store Defender Job');
-
+        return $request->json(Response::HTTP_ACCEPTED,$defender);
     }
 
     /**
@@ -57,6 +71,11 @@ class DefenderController extends Controller
     public function show(Defender $defender)
     {
         //
+
+        echo "en show";
+
+
+
     }
 
     /**

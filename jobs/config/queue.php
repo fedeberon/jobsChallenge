@@ -31,7 +31,7 @@ return [
     'connections' => [
 
         'sync' => [
-            'driver' => 'sync',
+            'driver' => 'redis',
         ],
 
         'database' => [
@@ -40,6 +40,7 @@ return [
             'queue' => 'default',
             'retry_after' => 90,
         ],
+
 
         'beanstalkd' => [
             'driver' => 'beanstalkd',

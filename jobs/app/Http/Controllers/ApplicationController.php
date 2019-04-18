@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\ProcessJobs;
-use App\Model\Operative;
+use App\Application;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Validator;
 
-class OperativeController extends Controller
+class ApplicationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +15,10 @@ class OperativeController extends Controller
     public function index()
     {
         //
-        return response()->json('Operative Index!', 200 );
+        $applications=Application::orderBy('id','DESC')->paginate(3);
+        return request()->json(200, $applications);
+
+
     }
 
     /**
@@ -29,6 +29,8 @@ class OperativeController extends Controller
     public function create()
     {
         //
+        return view('Application.create');
+
     }
 
     /**
@@ -39,20 +41,10 @@ class OperativeController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'name' => 'required'
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json($validator->messages(), Response::HTTP_BAD_REQUEST);
-        }
-
-        $operative = new Operative($request->all());
-        ProcessJobs::dispatch($operative)
-            ->onQueue('low')
-            ->delay(now()->addSeconds($operative->getSecondToProcess()));
-
-        return $request->json(Response::HTTP_ACCEPTED,$operative);
+        //
+        $this->validate($request,[ 'name'=>'required', 'type'=>'required']);
+        Application::create($request->all());
+        return redirect()->route('application.index')->with('success','Registro creado satisfactoriamente');
     }
 
     /**
@@ -64,6 +56,8 @@ class OperativeController extends Controller
     public function show($id)
     {
         //
+        $applications=Application::find($id);
+        return request()->json(200, $applications);
     }
 
     /**
@@ -75,6 +69,8 @@ class OperativeController extends Controller
     public function edit($id)
     {
         //
+        $application=application::find($id);
+        return view('application.edit',compact('application'));
     }
 
     /**
@@ -87,6 +83,10 @@ class OperativeController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $this->validate($request,[ 'name'=>'required', 'type'=>'required']);
+
+        application::find($id)->update($request->all());
+        return redirect()->route('application.index')->with('success','Registro actualizado satisfactoriamente');
     }
 
     /**
@@ -98,5 +98,7 @@ class OperativeController extends Controller
     public function destroy($id)
     {
         //
+        Application::find($id)->delete();
+        return redirect()->route('application.index')->with('success','Registro eliminado satisfactoriamente');
     }
 }
