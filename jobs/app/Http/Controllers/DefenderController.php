@@ -48,11 +48,10 @@ class DefenderController extends Controller
             if ($validator->fails()) {
                 return response()->json($validator->messages(), Response::HTTP_BAD_REQUEST);
             }
+
             $defender = new Defender();
             $defender->name = $request->name;
-            $defender->origin = $request->origin;
-            $defender->mode = $request->mode;
-            $defender->fullscan = $request->fullscan;
+            if($request->fullscan != null ) $defender->fullscan = $request->fullscan;
             $defender->delay = $request->delay;
 
             ProcessJobs::dispatch($defender)
