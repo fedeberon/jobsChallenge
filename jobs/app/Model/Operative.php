@@ -8,7 +8,7 @@ class Operative extends MyJob
 
     private static $TYPE = 'OPERATIVE';
 
-    protected $fillable = ['name', 'origin','duration', 'mode'];
+    protected $fillable = ['origin', 'mode'];
 
     function getType()
     {
@@ -41,9 +41,9 @@ class Operative extends MyJob
 
     function getSecondToProcess()
     {
-        if(is_null($this->duration)){
-            $this->duration = ($this->mode == "main") ? 5 : 15 ;
+        if(is_null($this->delay)){
+            $this->delay = ($this->mode == "main") ? 5 : 15 ;
         }
-        return $this->duration;
+        return $this->delay;
     }
 }

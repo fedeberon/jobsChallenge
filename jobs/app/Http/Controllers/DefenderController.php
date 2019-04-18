@@ -8,6 +8,7 @@ use App\Model\Defender;
 use App\Model\Operative;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Validator;
 
 
 class DefenderController extends Controller
@@ -30,10 +31,8 @@ class DefenderController extends Controller
 
     public function index()
     {
-         return response()->json('Defender Index!', 200 );
-
-//        $applications=Defender::orderBy('id','DESC')->paginate(3);
-//        return request()->json(200, $applications);
+        //
+        return response()->json('Defender Index!', 200 );
     }
 
     /**
@@ -54,12 +53,24 @@ class DefenderController extends Controller
      */
     public function store(Request $request)
     {
-        $defender = new Defender($request->all());
-        ProcessJobs::dispatch($defender)
-            ->onQueue('low')
-            ->delay(now()->addSeconds($defender->getSecondToProcess()));
 
-        return $request->json(Response::HTTP_ACCEPTED,$defender);
+            $validator = Validator::make($request->all(), [
+                'name' => 'required'
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json($validator->messages(), Response::HTTP_BAD_REQUEST);
+            }
+
+            $defender = new Defender();
+            $defender->name = $request->name;
+            if($request->fullscan != null ) $defender->fullscan = $request->fullscan;
+            $defender->delay = $request->delay;
+
+            ProcessJobs::dispatch($defender)
+                    ->onQueue('low');
+
+        return $request->json(Response::HTTP_OK, $defender);
     }
 
     /**
@@ -71,11 +82,6 @@ class DefenderController extends Controller
     public function show(Defender $defender)
     {
         //
-
-        echo "en show";
-
-
-
     }
 
     /**

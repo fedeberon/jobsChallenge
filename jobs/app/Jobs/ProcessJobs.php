@@ -3,6 +3,7 @@
 namespace App\Jobs;
 
 use App\Model\MyJob;
+use Carbon\Carbon;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -29,9 +30,10 @@ class ProcessJobs implements ShouldQueue
         $this->myJob->attempts = 1;
         $this->myJob->queue = 'in process';
         $this->myJob->job = 'in process';
+        $this->myJob->date = \Carbon\Carbon::now();
+        $this->myJob->user =auth()->user()->email;
         $this->delay = now()->addSeconds($this->myJob->getSecondToProcess());
         $this->myJob->save();
-
     }
 
     /**
@@ -41,12 +43,18 @@ class ProcessJobs implements ShouldQueue
      */
     public function handle()
     {
+        $this->myJob->start = \Carbon\Carbon::now();
         $this->myJob->status = 1;
         $this->myJob->queue = $this->job->getQueue();
         $this->myJob->job = $this->job->getJobId() . ' ' . $this->job->getName();
+        $this->myJob->finish = \Carbon\Carbon::now();
         $this->myJob->save();
 
     }
 
+    public function failed()
+    {
+        var_dump("failll");
+    }
 
 }

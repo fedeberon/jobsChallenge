@@ -12,10 +12,15 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
- class MyJob extends Model implements IJob{
+abstract class MyJob extends Model{
 
     protected $table = "jobs_events";
 
+    protected $fillable = ['id','queue','job','user','name','type','delay','date','start','finish'];
+
+    abstract function getType();
+
+    abstract function getSecondToProcess();
 
     public $timestamps = false;
 
@@ -23,14 +28,4 @@ use Illuminate\Http\Request;
 
     const UPDATED_AT = false;
 
-
-     function getType()
-     {
-         // TODO: Implement getType() method.
-     }
-
-     function getSecondToProcess()
-     {
-         // TODO: Implement getSecondToProcess() method.
-     }
- }
+}
