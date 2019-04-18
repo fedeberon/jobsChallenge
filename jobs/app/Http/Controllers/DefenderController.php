@@ -6,6 +6,7 @@ use App\Jobs\ProcessJobs;
 use App\Model\Defender;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Validator;
 
 
 class DefenderController extends Controller
