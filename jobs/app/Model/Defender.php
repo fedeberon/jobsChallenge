@@ -7,7 +7,7 @@ class Defender extends MyJob
 
     public static $TYPE = 'DEFENDER';
 
-    protected $fillable = [ 'name', 'fullscan', 'duration', 'finish' , 'queue', 'job'];
+    protected $fillable = ['name', 'fullscan', 'duration', 'finish' , 'queue', 'job'];
 
     protected $defaults = array(
         'fullscan' => false,
