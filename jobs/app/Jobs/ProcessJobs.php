@@ -24,15 +24,16 @@ class ProcessJobs implements ShouldQueue
      */
     public function __construct(MyJob $job)
     {
+        //
         $this->myJob = $job;
         $this->myJob->status = 0;
         $this->myJob->attempts = 1;
         $this->myJob->queue = 'in process';
         $this->myJob->job = 'in process';
         $this->myJob->date = \Carbon\Carbon::now();
+        $this->myJob->user = auth()->user()->email;
         $this->delay = now()->addSeconds($this->myJob->getSecondToProcess());
         $this->myJob->save();
-
     }
 
     /**
@@ -42,12 +43,11 @@ class ProcessJobs implements ShouldQueue
      */
     public function handle()
     {
-        $this->myJob->start = Carbon::now();
+        $this->myJob->start = \Carbon\Carbon::now();
         $this->myJob->status = 1;
         $this->myJob->queue = $this->job->getQueue();
         $this->myJob->job = $this->job->getJobId() . ' ' . $this->job->getName();
-        $this->myJob->finish = Carbon::now();
-
+        $this->myJob->finish = \Carbon\Carbon::now();
         $this->myJob->save();
 
     }

@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Jobs\ProcessJobs;
 use App\Model\Defender;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Validator;
+use Symfony\Component\HttpFoundation\Response;
+
 
 class DefenderController extends Controller
 {
