@@ -11,6 +11,7 @@ class CreateJobsEventsTable extends Migration
      *
      * @return void
      */
+
     public function up()
     {
         Schema::create('jobs_events', function (Blueprint $table) {
@@ -18,14 +19,16 @@ class CreateJobsEventsTable extends Migration
             $table->string('queue')->index();
             $table->string('name');
             $table->string('job');
-            $table->string('duration');
+            $table->string('delay');
             $table->boolean('fullscan');
-            $table->timestamp('start')->default(\Carbon\Carbon::now());
+            $table->timestamp('date')->default(\Carbon\Carbon::now());
+            $table->timestamp('start')->nullable();
             $table->timestamp('finish')->nullable();
             $table->integer('status');
             $table->unsignedTinyInteger('attempts');
             $table->string('origin');
             $table->string('mode');
+
 
         });
 

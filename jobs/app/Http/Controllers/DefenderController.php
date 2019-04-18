@@ -6,6 +6,7 @@ use App\Jobs\ProcessJobs;
 use App\Model\Defender;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Validator;
 
 class DefenderController extends Controller
 {
@@ -38,10 +39,23 @@ class DefenderController extends Controller
      */
     public function store(Request $request)
     {
-        $defender = new Defender($request->all());
-        ProcessJobs::dispatch($defender)
-            ->onQueue('low')
-            ->delay(now()->addSeconds($defender->getSecondToProcess()));
+
+            $validator = Validator::make($request->all(), [
+                'name' => 'required'
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json($validator->messages(), Response::HTTP_BAD_REQUEST);
+            }
+            $defender = new Defender();
+            $defender->name = $request->name;
+            $defender->origin = $request->origin;
+            $defender->mode = $request->mode;
+            $defender->fullscan = $request->fullscan;
+            $defender->delay = $request->delay;
+
+            ProcessJobs::dispatch($defender)
+                    ->onQueue('low');
 
         return $request->json(Response::HTTP_OK, $defender);
     }
