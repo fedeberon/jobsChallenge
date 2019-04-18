@@ -20,24 +20,24 @@ class Operative extends MyJob
         'mode' => "under"
     );
 
-    public function __construct(array $attributes = array())
-    {
-        $this->setRawAttributes($this->defaults, true);
-        parent::__construct($attributes);
-    }
-
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::addGlobalScope('operative', function (Builder $builder) {
-            $builder->where('type', 'operative');
-        });
-
-        static::creating(function ($article) {
-            $article->type = 'operative';
-        });
-    }
+//    public function __construct(array $attributes = array())
+//    {
+//        $this->setRawAttributes($this->defaults, true);
+//        parent::__construct($attributes);
+//    }
+//
+//    protected static function boot()
+//    {
+//        parent::boot();
+//
+//        static::addGlobalScope('operative', function (Builder $builder) {
+//            $builder->where('type', 'operative');
+//        });
+//
+//        static::creating(function ($article) {
+//            $article->type = 'operative';
+//        });
+//    }
 
     function getSecondToProcess()
     {

@@ -11,6 +11,7 @@ class Defender extends MyJob
 
     protected $defaults = array(
         'fullscan' => false,
+        'type' => 'defender',
     );
 
     public function __construct(array $attributes = array())
@@ -19,18 +20,18 @@ class Defender extends MyJob
         parent::__construct($attributes);
     }
 
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::addGlobalScope('defender', function (Builder $builder) {
-            $builder->where('type', 'defender');
-        });
-
-        static::creating(function ($article) {
-            $article->type = 'defender';
-        });
-    }
+//    protected static function boot()
+//    {
+//        parent::boot();
+//
+//        static::addGlobalScope('defender', function (Builder $builder) {
+//            $builder->where('type', 'defender');
+//        });
+//
+//        static::creating(function ($article) {
+//            $article->type = 'defender';
+//        });
+//    }
 
 
     function getType()

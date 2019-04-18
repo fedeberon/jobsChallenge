@@ -12,4 +12,8 @@ namespace App\Model;
 interface IJob
 {
 
+    function getType();
+
+    function getSecondToProcess();
+
 }

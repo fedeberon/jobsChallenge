@@ -27,4 +27,5 @@ Route::group([
 Route::resource('operative', 'OperativeController')->middleware('jwt');
 Route::resource('defender', 'DefenderController')->middleware('jwt');
 
-Route::get('defender/list/{fromDateTime}/{toDateTime}','DefenderController@findBetweenDateTimes');
+Route::resource('application', 'ApplicationController');
+Route::get('defender/list','DefenderController@findBetweenDateTimes');

@@ -10,14 +10,12 @@ namespace App\Model;
 
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
-abstract class MyJob extends Model{
+ class MyJob extends Model implements IJob{
 
     protected $table = "jobs_events";
 
-    abstract function getType();
-
-    abstract function getSecondToProcess();
 
     public $timestamps = false;
 
@@ -26,5 +24,13 @@ abstract class MyJob extends Model{
     const UPDATED_AT = false;
 
 
+     function getType()
+     {
+         // TODO: Implement getType() method.
+     }
 
-}
+     function getSecondToProcess()
+     {
+         // TODO: Implement getSecondToProcess() method.
+     }
+ }

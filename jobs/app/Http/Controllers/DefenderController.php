@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Application;
 use App\Jobs\ProcessJobs;
 use App\Model\Defender;
-use App\Model\MyJob;
 use App\Model\Operative;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpFoundation\Response;
 
 
@@ -22,21 +19,21 @@ class DefenderController extends Controller
      */
 
     public function findBetweenDateTimes(Request $request){
-        $from = Carbon::parse($request->fromDateTime);
-        $to = Carbon::parse($request->toDateTime);
+//        $from = Carbon::parse($request->fromDateTime);
+//        $to = Carbon::parse($request->toDateTime);
 
-        //$job = DB::select("select * from jobs_events");
+        $job = new Operative;
 
-        $job = Defender::all();
-
-        request()->json($job , 200);
+      return request()->json(new Operative , 200);
     }
 
 
     public function index()
     {
-        //
-        return response()->json('Defender Index!', 200 );
+         return response()->json('Defender Index!', 200 );
+
+//        $applications=Defender::orderBy('id','DESC')->paginate(3);
+//        return request()->json(200, $applications);
     }
 
     /**
@@ -62,7 +59,7 @@ class DefenderController extends Controller
             ->onQueue('low')
             ->delay(now()->addSeconds($defender->getSecondToProcess()));
 
-        return $request->json(Response::HTTP_ACCEPTED, $defender);
+        return $request->json(Response::HTTP_ACCEPTED,$defender);
     }
 
     /**
@@ -74,6 +71,11 @@ class DefenderController extends Controller
     public function show(Defender $defender)
     {
         //
+
+        echo "en show";
+
+
+
     }
 
     /**
