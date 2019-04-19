@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\ProcessJobs;
-use App\Model\Operative;
-use App\Model\MyJob;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Validator;
+use Illuminate\Support\Facades\DB;
 
-class OperativeController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +15,6 @@ class OperativeController extends Controller
     public function index()
     {
         //
-        return response()->json('Operative Index!', 200 );
     }
 
     /**
@@ -40,25 +35,14 @@ class OperativeController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
+        $request->validate([
             'name' => 'required',
-            'delay' => 'sometimes|numeric'
+            'password' => 'required',
+            'email' => 'required|email',
         ]);
 
-        if ($validator->fails()) {
-            return response()->json($validator->messages(), Response::HTTP_BAD_REQUEST);
-        }
-
-        $operative = new Operative();
-        $operative->name = $request->name;
-        $operative->delay = $request->delay;
-        if($request->mode != null ) $operative->mode = $request->mode;
-        if($request->origin != null ) $operative->origin = $request->origin;
-
-        ProcessJobs::dispatch($operative)
-            ->onQueue('low');
-
-        return $request->json(Response::HTTP_ACCEPTED,$operative);
+        $result=DB::insert("insert into users(name, password, email) values (?, ?, ?)", [$request->input('name'), $request->input('password'), $request->input('email')]);
+        echo "Registered Successfully";
     }
 
     /**
