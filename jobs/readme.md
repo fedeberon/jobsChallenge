@@ -7,6 +7,33 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+
+## Repository
+```  https://github.com/fedeberon/jobsChallenge.git  ```
+### or
+```  git@github.com:fedeberon/jobsChallenge.git  ```
+
+
+## Creating Table Users
+You have to create de user table at data base. Please run this command.
+
+```php artisan db:seed --class=UsersTableSeeder```
+
+# Start Docker conteiner
+### Go into job folder and run 
+##```docker-compose up -d```
+
+### Create a User to data base Interactive with db bash
+#### ```docker-compose exec db bash```
+and then run
+
+```mysql -u root -p```
+
+```mysql> show databases;```
+
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

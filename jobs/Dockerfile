@@ -21,8 +21,10 @@ RUN apt-get update && apt-get install -y \
     git \
     curl
 
+
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+
 
 # Install extensions
 RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl
@@ -31,6 +33,7 @@ RUN docker-php-ext-install gd
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 
 # Add user for laravel application
 RUN groupadd -g 1000 www
@@ -42,9 +45,17 @@ COPY . /var/www
 # Copy existing application directory permissions
 COPY --chown=www:www . /var/www
 
+
+
+RUN apt-get update && apt-get install -y supervisor
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+CMD ["/usr/bin/supervisord"]
+
 # Change current user to www
 USER www
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
 CMD ["php-fpm"]
+
+
