@@ -31,7 +31,7 @@ class ProcessJobs implements ShouldQueue
         $this->myJob->queue = 'in process';
         $this->myJob->job = 'in process';
         $this->myJob->date = \Carbon\Carbon::now();
-        $this->myJob->user =auth()->user()->email;
+        $this->myJob->user = auth()->user()->email;
         $this->delay = now()->addSeconds($this->myJob->getSecondToProcess());
         $this->myJob->save();
     }
