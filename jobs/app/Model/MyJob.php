@@ -10,10 +10,13 @@ namespace App\Model;
 
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 abstract class MyJob extends Model{
 
     protected $table = "jobs_events";
+
+    protected $fillable = ['id','queue','job','user','name','type','delay','date','start','finish'];
 
     abstract function getType();
 
@@ -24,7 +27,5 @@ abstract class MyJob extends Model{
     const CREATED_AT = false;
 
     const UPDATED_AT = false;
-
-
 
 }
