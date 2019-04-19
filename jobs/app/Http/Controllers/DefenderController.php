@@ -6,7 +6,9 @@ use App\Application;
 use App\Jobs\ProcessJobs;
 use App\Model\Defender;
 use App\Model\Operative;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpFoundation\Response;
 use Validator;
 
@@ -20,13 +22,35 @@ class DefenderController extends Controller
      */
 
     public function findBetweenDateTimes(Request $request){
-//        $from = Carbon::parse($request->fromDateTime);
-//        $to = Carbon::parse($request->toDateTime);
+       $from = Carbon::parse($request->fromDateTime);
+       $to = Carbon::parse($request->toDateTime);
 
-        $job = new Operative;
+        $jobs = DB::table('jobs_events')->whereBetween('date', [$from, $to])->get();
 
-      return request()->json(new Operative , 200);
+      return request()->json(200,$jobs);
     }
+
+    public function findBetweenDateTimesAndType(Request $request){
+        $from = Carbon::parse($request->fromDateTime);
+        $to = Carbon::parse($request->toDateTime);
+        $type = $request->type;
+
+        $jobs = DB::table('jobs_events')->whereBetween('date', [$from, $to])->where('type',$type)->get();
+
+        return request()->json(200,$jobs);
+    }
+    public function findBetweenDateTimesAndTypeAndStatus(Request $request){
+        $from = Carbon::parse($request->fromDateTime);
+        $to = Carbon::parse($request->toDateTime);
+        $type = $request->type;
+        $status = $request->status;
+
+        $jobs = DB::table('jobs_events')->whereBetween('date', [$from, $to])->where('type',$type)->where('status',$status)->get();
+
+        return request()->json(200,$jobs);
+    }
+
+
 
 
     public function index()

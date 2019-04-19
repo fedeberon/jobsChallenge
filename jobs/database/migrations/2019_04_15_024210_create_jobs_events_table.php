@@ -17,7 +17,7 @@ class CreateJobsEventsTable extends Migration
             $table->bigIncrements('id');
             $table->string('queue')->index();
             $table->string('job');
-            $table->string('user');
+            $table->string('user')->auth()->user()->email;
             $table->string('name');
             $table->string('type');
             $table->string('delay');

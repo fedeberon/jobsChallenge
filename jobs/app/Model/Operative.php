@@ -17,14 +17,15 @@ class Operative extends MyJob
 
     protected $defaults = array(
         'origin' => "not specified",
-        'mode' => "under"
+        'mode' => "under",
+        'type' => "operative"
     );
 
-//    public function __construct(array $attributes = array())
-//    {
-//        $this->setRawAttributes($this->defaults, true);
-//        parent::__construct($attributes);
-//    }
+    public function __construct(array $attributes = array())
+    {
+        $this->setRawAttributes($this->defaults, true);
+        parent::__construct($attributes);
+    }
 //
 //    protected static function boot()
 //    {
