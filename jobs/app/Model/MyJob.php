@@ -9,13 +9,14 @@
 namespace App\Model;
 
 
+
 use Illuminate\Database\Eloquent\Model;
 
 abstract class MyJob extends Model{
 
     protected $table = "jobs_events";
 
-    protected $fillable = ['id','queue','job','user','name','type','delay','date','start','finish','mode'];
+    protected $fillable = ['id','queue','job','user','name','type','delay','date','start','finish'];
 
     abstract function getType();
 

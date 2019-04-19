@@ -6,9 +6,7 @@ class Defender extends MyJob
 {
 
     public static $TYPE = 'DEFENDER';
-
-    protected $fillable = ['name', 'fullscan', 'duration', 'finish' , 'queue', 'job'];
-
+    protected $fillable = ['fullscan'];
     protected $defaults = array(
         'fullscan' => false,
     );
@@ -40,9 +38,9 @@ class Defender extends MyJob
 
     function getSecondToProcess()
     {
-        if(is_null($this->duration)){
-            $this->duration = $this->fullscan ? 5 : 10 ;
+        if(is_null($this->delay)){
+            $this->delay= $this->fullscan ? 5 : 10 ;
         }
-        return $this->duration;
+        return $this->delay;
     }
 }

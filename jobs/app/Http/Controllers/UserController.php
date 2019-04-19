@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\ProcessJobs;
-use App\Model\Defender;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Validator;
+use Illuminate\Support\Facades\DB;
 
-
-class DefenderController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +15,6 @@ class DefenderController extends Controller
     public function index()
     {
         //
-        return response()->json('Defender Index!', 200 );
     }
 
     /**
@@ -40,33 +35,23 @@ class DefenderController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'password' => 'required',
+            'email' => 'required|email',
+        ]);
 
-            $validator = Validator::make($request->all(), [
-                'name' => 'required'
-            ]);
-
-            if ($validator->fails()) {
-                return response()->json($validator->messages(), Response::HTTP_BAD_REQUEST);
-            }
-
-            $defender = new Defender();
-            $defender->name = $request->name;
-            if($request->fullscan != null ) $defender->fullscan = $request->fullscan;
-            $defender->delay = $request->delay;
-
-            ProcessJobs::dispatch($defender)
-                    ->onQueue('low');
-
-        return $request->json(Response::HTTP_OK, $defender);
+        $result=DB::insert("insert into users(name, password, email) values (?, ?, ?)", [$request->input('name'), $request->input('password'), $request->input('email')]);
+        echo "Registered Successfully";
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Defender  $defender
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Defender $defender)
+    public function show($id)
     {
         //
     }
@@ -74,10 +59,10 @@ class DefenderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Defender  $defender
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Defender $defender)
+    public function edit($id)
     {
         //
     }
@@ -86,10 +71,10 @@ class DefenderController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Defender  $defender
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Defender $defender)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -97,10 +82,10 @@ class DefenderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Defender  $defender
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Defender $defender)
+    public function destroy($id)
     {
         //
     }

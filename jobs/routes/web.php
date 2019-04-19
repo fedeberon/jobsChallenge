@@ -16,3 +16,10 @@ Route::get('/', function () {
 });
 
 Route::resource('/documentation', 'DocumentationController');
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::post('/store', "UserController@store");
+
