@@ -42,7 +42,8 @@ class DefenderController extends Controller
     {
 
             $validator = Validator::make($request->all(), [
-                'name' => 'required'
+                'name' => 'required',
+                'delay' => 'sometimes|numeric'
             ]);
 
             if ($validator->fails()) {
@@ -51,8 +52,9 @@ class DefenderController extends Controller
 
             $defender = new Defender();
             $defender->name = $request->name;
-            if($request->fullscan != null ) $defender->fullscan = $request->fullscan;
             $defender->delay = $request->delay;
+
+            if($request->fullscan != null ) $defender->fullscan = $request->fullscan;
 
             ProcessJobs::dispatch($defender)
                     ->onQueue('low');
