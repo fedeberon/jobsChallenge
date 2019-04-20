@@ -1,5 +1,6 @@
 FROM php:7.2-fpm
 
+
 # Copy composer.lock and composer.json
 COPY composer.lock composer.json /var/www/
 
@@ -21,8 +22,10 @@ RUN apt-get update && apt-get install -y \
     git \
     curl
 
+
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+
 
 # Install extensions
 RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl
@@ -31,6 +34,7 @@ RUN docker-php-ext-install gd
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 
 # Add user for laravel application
 RUN groupadd -g 1000 www
@@ -42,9 +46,23 @@ COPY . /var/www
 # Copy existing application directory permissions
 COPY --chown=www:www . /var/www
 
+
+
+RUN apt-get update && apt-get install -y supervisor
+RUN mkdir -p /var/www/docker-logs/
+RUN touch worker.log
+COPY supervisor/supervisord.conf /etc/supervisord.conf
+COPY jobs.conf /etc/supervisor/conf.d/jobs.conf
+ADD /etc/supervisor/supervisor.conf /etc/
+CMD ["/usr/bin/supervisord"]
+
+RUN apt-get update && apt-get install -y procps
+
 # Change current user to www
-USER www
+#USER www
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
 CMD ["php-fpm"]
+
+

@@ -81,12 +81,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Team Spicy
+                    It Works!
                 </div>
 
                 <div class="links">
-                    <a href="/documentation"> API Documentation</a>
-                    <a href="https://laracasts.com">Repository</a>
+                    <a href="https://laravel.com/docs">Docs</a>
+                    <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
