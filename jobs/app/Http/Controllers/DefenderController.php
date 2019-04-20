@@ -21,37 +21,6 @@ class DefenderController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function findBetweenDateTimes(Request $request){
-       $from = Carbon::parse($request->fromDateTime);
-       $to = Carbon::parse($request->toDateTime);
-
-        $jobs = DB::table('jobs_events')->whereBetween('date', [$from, $to])->get();
-
-      return request()->json(200,$jobs);
-    }
-
-    public function findBetweenDateTimesAndType(Request $request){
-        $from = Carbon::parse($request->fromDateTime);
-        $to = Carbon::parse($request->toDateTime);
-        $type = $request->type;
-
-        $jobs = DB::table('jobs_events')->whereBetween('date', [$from, $to])->where('type',$type)->get();
-
-        return request()->json(200,$jobs);
-    }
-    public function findBetweenDateTimesAndTypeAndStatus(Request $request){
-        $from = Carbon::parse($request->fromDateTime);
-        $to = Carbon::parse($request->toDateTime);
-        $type = $request->type;
-        $status = $request->status;
-
-        $jobs = DB::table('jobs_events')->whereBetween('date', [$from, $to])->where('type',$type)->where('status',$status)->get();
-
-        return request()->json(200,$jobs);
-    }
-
-
-
 
     public function index()
     {

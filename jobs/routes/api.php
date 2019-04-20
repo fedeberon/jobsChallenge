@@ -29,6 +29,6 @@ Route::resource('defender', 'DefenderController')->middleware('jwt');
 
 Route::resource('application', 'ApplicationController');
 
-Route::get('jobs/list/{fromDateTime}/{toDateTime}','DefenderController@findBetweenDateTimes');
-Route::get('jobs/list/{fromDateTime}/{toDateTime}/{type}','DefenderController@findBetweenDateTimesAndType');
-Route::get('jobs/list/{fromDateTime}/{toDateTime}/{type}/{status}','DefenderController@findBetweenDateTimesAndTypeAndStatus');
+Route::get('jobs/list/{fromDateTime}/{toDateTime}','MyJobController@findBetweenDateTimes');
+Route::get('jobs/list/{fromDateTime}/{toDateTime}/{type}','MyJobController@findBetweenDateTimesAndType');
+Route::get('jobs/list/{fromDateTime}/{toDateTime}/{type}/{status}','MyJobController@findBetweenDateTimesAndTypeAndStatus');

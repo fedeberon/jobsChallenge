@@ -15,9 +15,7 @@ class ApplicationController extends Controller
     public function index()
     {
         //
-        $applications=Application::orderBy('id','DESC')->paginate(3);
-        return request()->json(200, $applications);
-
+        return response()->json('Application Index!', 200 );
 
     }
 
@@ -29,7 +27,6 @@ class ApplicationController extends Controller
     public function create()
     {
         //
-        return view('Application.create');
 
     }
 
@@ -56,8 +53,7 @@ class ApplicationController extends Controller
     public function show($id)
     {
         //
-        $applications=Application::find($id);
-        return request()->json(200, $applications);
+
     }
 
     /**
@@ -69,8 +65,7 @@ class ApplicationController extends Controller
     public function edit($id)
     {
         //
-        $application=application::find($id);
-        return view('application.edit',compact('application'));
+
     }
 
     /**
@@ -83,10 +78,7 @@ class ApplicationController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $this->validate($request,[ 'name'=>'required', 'type'=>'required']);
 
-        application::find($id)->update($request->all());
-        return redirect()->route('application.index')->with('success','Registro actualizado satisfactoriamente');
     }
 
     /**
@@ -98,7 +90,6 @@ class ApplicationController extends Controller
     public function destroy($id)
     {
         //
-        Application::find($id)->delete();
-        return redirect()->route('application.index')->with('success','Registro eliminado satisfactoriamente');
+
     }
 }
