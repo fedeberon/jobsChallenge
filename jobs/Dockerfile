@@ -1,5 +1,6 @@
 FROM php:7.2-fpm
 
+
 # Copy composer.lock and composer.json
 COPY composer.lock composer.json /var/www/
 
@@ -48,11 +49,17 @@ COPY --chown=www:www . /var/www
 
 
 RUN apt-get update && apt-get install -y supervisor
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+RUN mkdir -p /var/www/docker-logs/
+RUN touch worker.log
+COPY supervisor/supervisord.conf /etc/supervisord.conf
+COPY jobs.conf /etc/supervisor/conf.d/jobs.conf
+ADD /etc/supervisor/supervisor.conf /etc/
 CMD ["/usr/bin/supervisord"]
 
+RUN apt-get update && apt-get install -y procps
+
 # Change current user to www
-USER www
+#USER www
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000

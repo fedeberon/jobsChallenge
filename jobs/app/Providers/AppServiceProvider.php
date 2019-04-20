@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Queue;
@@ -31,9 +32,13 @@ class AppServiceProvider extends ServiceProvider
 
         Schema::defaultStringLength(191);
 
-//        Queue::after(function ($connection, $job, $data) {
-//            var_dump($data);
-//            exit;
-//        });
+        Queue::failing(function (JobFailed $event) {
+             $event->connectionName;
+             $event->job;
+             $event->exception;
+
+            Log::error('There has been an error with job: ' . $event->job .  '. Connection Name : '  . $event->connectionName  . '. Exception: ' . $event->exception);
+        });
+
     }
 }
