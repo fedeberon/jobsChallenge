@@ -53,10 +53,7 @@ RUN mkdir -p /var/www/docker-logs/
 RUN touch worker.log
 COPY supervisor/supervisord.conf /etc/supervisord.conf
 COPY supervisor/jobs.conf /etc/supervisor/conf.d/jobs.conf
-#ADD /etc/supervisor/supervisor.conf /etc/
 CMD ["/usr/bin/supervisord"]
-
-RUN apt-get update && apt-get install -y procps
 
 # Change current user to www
 USER www
