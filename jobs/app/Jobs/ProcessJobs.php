@@ -47,6 +47,8 @@ class ProcessJobs implements ShouldQueue
         $this->myJob->status = 1;
         $this->myJob->queue = $this->job->getQueue();
         $this->myJob->job = $this->job->getJobId() . ' ' . $this->job->getName();
+
+
         $this->myJob->finish = \Carbon\Carbon::now()->addSeconds($this->myJob->getSecondToProcess());
         $this->myJob->save();
 
