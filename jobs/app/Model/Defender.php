@@ -30,4 +30,11 @@ class Defender extends MyJob
         }
         return $this->delay;
     }
+
+    function run()
+    {
+        // TODO: Implement run() method.
+
+        sleep($this->getSecondToProcess());
+    }
 }
