@@ -23,7 +23,7 @@ class MyServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('\Http\Services\JobService', function ($app) {
-            return new JobServiceImpl();
+            return new JobServiceInterfaceImpl();
         });
     }
 

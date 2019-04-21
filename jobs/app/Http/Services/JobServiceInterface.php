@@ -9,7 +9,7 @@
 namespace Http\Services;
 
 
-interface JobService
+interface JobServiceInterface
 {
 
     function findBetweenDateTimes($from, $to);
