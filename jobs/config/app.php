@@ -174,8 +174,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        //\Http\Services\JobServiceImpl::class,
-        \App\Providers\EnvatoCustomServiceProvider::class
 
     ],
 

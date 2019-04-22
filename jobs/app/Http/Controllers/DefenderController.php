@@ -2,21 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Application;
 use App\Jobs\ProcessJobs;
 use App\Model\Defender;
 use App\Model\Operative;
 use Carbon\Carbon;
-use Http\Services\JobServiceInterface;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpFoundation\Response;
 use Validator;
 
 
 class DefenderController extends Controller
 {
-
 
 
     /**
@@ -66,8 +62,8 @@ class DefenderController extends Controller
 
             if($request->fullscan != null ) $defender->fullscan = $request->fullscan;
 
-
-            ProcessJobs::dispatch($defender)->onQueue('low');
+            ProcessJobs::dispatch($defender)
+                    ->onQueue('low');
 
         return $request->json(Response::HTTP_OK, $defender);
     }
