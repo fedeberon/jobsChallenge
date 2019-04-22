@@ -2,13 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Application;
 use App\Jobs\ProcessJobs;
 use App\Model\Defender;
-use App\Model\Operative;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpFoundation\Response;
 use Validator;
 
