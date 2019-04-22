@@ -29,14 +29,11 @@ class Operative extends MyJob
 
     function getSecondToProcess()
     {
-        if(is_null($this->delay)){
-            $this->delay = ($this->mode == "main") ? 5 : 15 ;
-        }
-        return $this->delay;
+        return ( is_null($this->delay) ?   $this->delay = ($this->mode == "main") ? 5 : 15  : $this->delay );
     }
 
     function run()
     {
-        sleep($this->getSecondToProcess());
+        sleep(20);
     }
 }

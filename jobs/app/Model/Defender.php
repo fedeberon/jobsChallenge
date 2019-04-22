@@ -33,8 +33,6 @@ class Defender extends MyJob
 
     function run()
     {
-        // TODO: Implement run() method.
-
-        sleep($this->getSecondToProcess());
+        sleep(10);
     }
 }

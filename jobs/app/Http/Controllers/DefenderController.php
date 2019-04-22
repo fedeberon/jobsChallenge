@@ -18,16 +18,6 @@ class DefenderController extends Controller
 {
 
 
-    private $jobService;
-
-    /**
-     * DefenderController constructor.
-     */
-    public function __construct(JobServiceInterface $jobService)
-    {
-        $this->jobService = $jobService;
-    }
-
 
     /**
      * Display a listing of the resource.
@@ -76,8 +66,8 @@ class DefenderController extends Controller
 
             if($request->fullscan != null ) $defender->fullscan = $request->fullscan;
 
-            ProcessJobs::dispatch($defender)
-                    ->onQueue('low');
+
+            ProcessJobs::dispatch($defender)->onQueue('low');
 
         return $request->json(Response::HTTP_OK, $defender);
     }
