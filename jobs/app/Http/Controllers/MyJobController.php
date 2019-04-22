@@ -3,24 +3,11 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
-use Http\Services\JobService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class MyJobController extends Controller
 {
-    /**
-     * MyJobController constructor.
-     */
-
-    private $jobService;
-
-    public function __construct(JobService $jobService)
-    {
-        $this->jobService = $jobService;
-    }
-
-
 
     /**
      * Display a listing of the resource.
@@ -32,9 +19,9 @@ class MyJobController extends Controller
         $from = Carbon::parse($request->fromDateTime);
         $to = Carbon::parse($request->toDateTime);
 
-        $jobs = $this->jobService->findBetweenDateTimes($from, $to);
+        //$jobs = $this->jobService->findBetweenDateTimes($from, $to);
 
-        return request()->json(200,$jobs);
+        return request()->json(200,"");
     }
 
     public function findBetweenDateTimesAndType(Request $request){

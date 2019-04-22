@@ -6,7 +6,6 @@ use App\Jobs\ProcessJobs;
 use App\Model\Defender;
 use App\Model\Operative;
 use Carbon\Carbon;
-use Http\Services\JobServiceInterface;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Validator;
@@ -14,17 +13,6 @@ use Validator;
 
 class DefenderController extends Controller
 {
-
-
-    private $jobService;
-
-    /**
-     * DefenderController constructor.
-     */
-    public function __construct(JobServiceInterface $jobService)
-    {
-        $this->jobService = $jobService;
-    }
 
 
     /**
