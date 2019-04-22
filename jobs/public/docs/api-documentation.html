@@ -28,8 +28,6 @@
       </span>
     </a>
     <div class="tocify-wrapper">
-        <img class="bolivar-software" src="docs/images/logo.png" />
-        <h2 class="bs-title"> Bolivar software </h2>
                     <div class="lang-selector">
                                   <a href="#" data-language-name="bash">bash</a>
                                   <a href="#" data-language-name="javascript">javascript</a>
@@ -53,7 +51,8 @@
 <!-- END_INFO -->
 <h1>general</h1>
 <!-- START_a925a8d22b3615f12fca79456d286859 -->
-<h2>Get a JWT via given credentials.</h2>
+<h2>Login</h2>
+<p> Get a JWT via given credentials. </p>
           <aside class="warning">
               <br>
               You must replace <code> localhost </code> with localhost ip and port.
@@ -85,14 +84,22 @@ fetch(url, {
 <p>Example response (200):</p>
 </blockquote>
 <pre><code class="language-json">{
-    "email": "admin@admin.com",
-    "password": "adminadmin"
+        "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU1NTc2NzkyMCwiZXhwIjoxNTU1NzcxNTIwLCJuYmYiOjE1NTU3Njc5MjAsImp0aSI6ImdsMnIzNlR5VW43bHBSY0kiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.YnoSu6l0hq3mre1JKM-Je5s2CM2jx5gRwP5bBYvoCOo",
+    "token_type": "bearer",
+    "user": {
+        "id": 1,
+        "name": "Administrator",
+        "email": "admin@admin.com",
+        "email_verified_at": null,
+        "created_at": "2019-04-18 18:50:13",
+        "updated_at": "2019-04-18 18:50:13"
+    }
 }</code></pre>
 <h3>HTTP Request</h3>
 <p><code>POST api/auth/login</code></p>
 <!-- END_a925a8d22b3615f12fca79456d286859 -->
 <!-- START_19ff1b6f8ce19d3c444e9b518e8f7160 -->
-<h2>Log the user out (Invalidate the token).</h2>
+<h2>Log out (Invalidate the token).</h2>
 <aside class="notice">
     <br>
     You must replace <code>{token}</code> with your personal API token.
@@ -121,7 +128,7 @@ fetch(url, {
 <p><code>POST api/auth/logout</code></p>
 <!-- END_19ff1b6f8ce19d3c444e9b518e8f7160 -->
 <!-- START_994af8f47e3039ba6d6d67c09dd9e415 -->
-<h2>Refresh a token.</h2>
+<h2>Refresh token.</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
