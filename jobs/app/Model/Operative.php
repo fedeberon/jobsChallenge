@@ -34,4 +34,9 @@ class Operative extends MyJob
         }
         return $this->delay;
     }
+
+    function run()
+    {
+        sleep($this->getSecondToProcess());
+    }
 }
