@@ -20,6 +20,7 @@ class MyJobServiceProvider extends ServiceProvider
         //
 
         $this->app->bind('App\Interfaces\JobService', 'App\Service\JobServiceImpl');
+        $this->app->bind('App\Interfaces\JobRepository', 'App\Service\JobRepositoryImpl');
 
     }
 

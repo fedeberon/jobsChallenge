@@ -8,6 +8,7 @@
 
 namespace App\Service;
 
+use App\Interfaces\JobRepository;
 use App\Interfaces\JobService;
 use App\Jobs\ProcessJobs;
 use App\Model\MyJob;
@@ -17,23 +18,40 @@ use Illuminate\Support\Facades\DB;
 class JobServiceImpl implements JobService
 {
 
+    private $jobRepository;
+
+    /**
+     * JobServiceImpl constructor.
+     * @param $jobRepository
+     */
+    public function __construct(JobRepository $jobRepository)
+    {
+        $this->jobRepository = $jobRepository;
+    }
+
 
     function findBetweenDateTimes($from, $to)
     {
         // TODO: Implement findBetweenDateTimes() method.
-        return DB::table('jobs_events')->whereBetween('date', [$from, $to])->get();
+        return $this->jobRepository->findBetweenDateTimes($from, $to);
+    }
+
+    function findByType($type)
+    {
+        // TODO: Implement findByType() method.
+        return $this->jobRepository->findByType($type);
     }
 
     function findBetweenDateTimesAndType($from, $to, $type)
     {
         // TODO: Implement findBetweenDateTimesAndType() method.
-        return DB::table('jobs_events')->whereBetween('date', [$from, $to])->where('type',$type)->get();
+        return $this->jobRepository->findBetweenDateTimesAndType($from, $to, $type);
     }
 
     function findBetweenDateTimesAndTypeAndStatus($from, $to, $type, $status)
     {
         // TODO: Implement findBetweenDateTimesAndTypeAndStatus() method.
-        return DB::table('jobs_events')->whereBetween('date', [$from, $to])->where('type',$type)->where('status',$status)->get();
+        return $this->jobRepository->findBetweenDateTimesAndType($from, $to, $type, $status);
     }
 
     function saveAndProcess(MyJob $job)

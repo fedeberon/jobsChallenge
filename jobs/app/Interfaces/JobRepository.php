@@ -1,17 +1,14 @@
 <?php
+/**
+ * Created by IntelliJ IDEA.
+ * User: erwin
+ * Date: 23/4/2019
+ * Time: 10:44
+ */
 
 namespace App\Interfaces;
 
-
-use App\Model\MyJob;
-
-/**
- * Created by IntelliJ IDEA.
- * User: federicoberon
- * Date: 22/04/2019
- * Time: 21:03
- */
-interface JobService
+interface JobRepository
 {
 
     function findBetweenDateTimes($from, $to);
