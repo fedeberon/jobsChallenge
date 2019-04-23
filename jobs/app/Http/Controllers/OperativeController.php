@@ -2,15 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\ProcessJobs;
+use App\Interfaces\JobService;
 use App\Model\Operative;
-use App\Model\MyJob;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Validator;
 
 class OperativeController extends Controller
 {
+
+    private $jobService;
+
+    /**
+     * OperativeController constructor.
+     * @param $jobService
+     */
+    public function __construct(JobService $jobService)
+    {
+        $this->jobService = $jobService;
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -55,8 +67,8 @@ class OperativeController extends Controller
         if($request->mode != null ) $operative->mode = $request->mode;
         if($request->origin != null ) $operative->origin = $request->origin;
 
-        ProcessJobs::dispatch($operative)
-            ->onQueue('low');
+        $this->jobService->saveAndProcess($operative);
+
 
         return $request->json(Response::HTTP_ACCEPTED,$operative);
     }

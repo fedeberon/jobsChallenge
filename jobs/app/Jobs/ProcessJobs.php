@@ -3,7 +3,6 @@
 namespace App\Jobs;
 
 use App\Model\MyJob;
-use Carbon\Carbon;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -27,8 +26,10 @@ class ProcessJobs implements ShouldQueue
     {
         //
         $this->myJob = $job;
-        $this->myJob->queue = $this->job->getQueue();
         $this->myJob->status = 0;
+        $this->myJob->queue = "in progress";
+        $this->myJob->job = "in progress";
+        $this->myJob->attempts = 1;
         $this->myJob->date = \Carbon\Carbon::now();
         $this->myJob->user = auth()->user()->email;
         $this->delay = now()->addSeconds($this->myJob->getSecondToProcess());
@@ -44,7 +45,7 @@ class ProcessJobs implements ShouldQueue
     {
         $this->myJob->start = \Carbon\Carbon::now();
         $this->myJob->status = 1;
-
+        $this->myJob->queue = $this->job->getQueue();
         $this->myJob->job = $this->job->getJobId() . ' ' . $this->job->getName();
         $this->MyJob->run();
         $this->myJob->status = 2;

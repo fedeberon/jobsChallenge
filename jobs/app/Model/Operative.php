@@ -6,9 +6,12 @@ class Operative extends MyJob
 {
     //
 
-    private static $TYPE = 'OPERATIVE';
+    const ORIGIN = 'not specified';
+    const MODE = 'under';
+    const TYPE = 'operative';
 
     protected $fillable = ['origin', 'mode'];
+
 
     function getType()
     {
@@ -16,9 +19,9 @@ class Operative extends MyJob
     }
 
     protected $defaults = array(
-        'origin' => "not specified",
-        'mode' => "under",
-        'type' => 'operative'
+        'origin' => 'not specified',
+        'mode' => 'under',
+        'type' => 'operative',
     );
 
     public function __construct(array $attributes = array())
@@ -34,6 +37,6 @@ class Operative extends MyJob
 
     function run()
     {
-        sleep(20);
+        sleep($this->getSecondToProcess());
     }
 }

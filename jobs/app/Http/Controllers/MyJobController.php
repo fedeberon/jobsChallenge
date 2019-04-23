@@ -2,12 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Interfaces\JobService;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Response;
 
 class MyJobController extends Controller
 {
+
+
+    private $jobService;
+
+    /**
+     * MyJobController constructor.
+     * @param $jobService
+     */
+    public function __construct(JobService $jobService)
+    {
+        $this->jobService = $jobService;
+    }
+
 
     /**
      * Display a listing of the resource.
@@ -18,20 +32,18 @@ class MyJobController extends Controller
     public function findBetweenDateTimes(Request $request){
         $from = Carbon::parse($request->fromDateTime);
         $to = Carbon::parse($request->toDateTime);
+        $jobs = $this->jobService->findBetweenDateTimes($from, $to);
 
-        //$jobs = $this->jobService->findBetweenDateTimes($from, $to);
-
-        return request()->json(200,"");
+        return response()->json($jobs, Response::HTTP_OK);
     }
 
     public function findBetweenDateTimesAndType(Request $request){
         $from = Carbon::parse($request->fromDateTime);
         $to = Carbon::parse($request->toDateTime);
         $type = $request->type;
+        $jobs = $this->jobService->findBetweenDateTimesAndType($from, $to, $type);
 
-        $jobs = DB::table('jobs_events')->whereBetween('date', [$from, $to])->where('type',$type)->get();
-
-        return request()->json(200,$jobs);
+        return response()->json($jobs, Response::HTTP_OK);
     }
     public function findBetweenDateTimesAndTypeAndStatus(Request $request){
         $from = Carbon::parse($request->fromDateTime);
@@ -39,15 +51,15 @@ class MyJobController extends Controller
         $type = $request->type;
         $status = $request->status;
 
-        $jobs = DB::table('jobs_events')->whereBetween('date', [$from, $to])->where('type',$type)->where('status',$status)->get();
+        $jobs = $this->jobService->findBetweenDateTimesAndTypeAndStatus($from, $to, $type, $status);
 
-        return request()->json(200,$jobs);
+        return response()->json($jobs, Response::HTTP_OK);
     }
 
     public function index()
     {
         //
-        return response()->json('MyJobController Index!', 200 );
+        return response()->json('MyJobController Index!', Response::HTTP_OK );
     }
 
     /**
