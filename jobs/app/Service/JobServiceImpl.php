@@ -11,6 +11,7 @@ namespace App\Service;
 use App\Interfaces\JobService;
 use App\Jobs\ProcessJobs;
 use App\Model\MyJob;
+use Illuminate\Support\Facades\DB;
 
 
 class JobServiceImpl implements JobService
@@ -20,7 +21,7 @@ class JobServiceImpl implements JobService
     function findBetweenDateTimes($from, $to)
     {
         // TODO: Implement findBetweenDateTimes() method.
-        return DB::table('jobs_events')->whereBetween('date', [$from, $to]);
+        return DB::table('jobs_events')->whereBetween('date', [$from, $to])->get();
     }
 
     function findBetweenDateTimesAndType($from, $to, $type)
