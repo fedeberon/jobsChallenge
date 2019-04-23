@@ -37,6 +37,13 @@ class MyJobController extends Controller
         return response()->json($jobs, Response::HTTP_OK);
     }
 
+    public function findByType(Request $request){
+        $type = $request->type;
+        $jobs = $this->jobService->findByType($type);
+
+        return response()->json($jobs, Response::HTTP_OK);
+    }
+
     public function findBetweenDateTimesAndType(Request $request){
         $from = Carbon::parse($request->fromDateTime);
         $to = Carbon::parse($request->toDateTime);
