@@ -13,12 +13,23 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group([
+    'prefix' => 'auth',
+], function () {
+    Route::post('login', 'AuthController@login');
+    Route::post('logout', 'AuthController@logout');
+    Route::post('refresh', 'AuthController@refresh');
+    Route::post('me', 'AuthController@me');
+
 });
 
 
-Route::resource('operative', 'OperativeController');
+Route::resource('operative', 'OperativeController')->middleware('jwt');
+Route::resource('defender', 'DefenderController')->middleware('jwt');
 
+Route::resource('application', 'ApplicationController');
 
-Route::resource('defender', 'DefenderController');
+Route::get('jobs/list/{fromDateTime}/{toDateTime}','MyJobController@findBetweenDateTimes');
+Route::get('jobs/list/{type}','MyJobController@findByType');
+Route::get('jobs/list/{fromDateTime}/{toDateTime}/{type}','MyJobController@findBetweenDateTimesAndType');
+Route::get('jobs/list/{fromDateTime}/{toDateTime}/{type}/{status}','MyJobController@findBetweenDateTimesAndTypeAndStatus');

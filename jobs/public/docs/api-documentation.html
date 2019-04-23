@@ -1,0 +1,455 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>REST API Documentation</title>
+
+    <link rel="stylesheet" href="docs/css/style.css" />
+    <link rel="stylesheet" href="docs/css/stylesheet.css" />
+
+
+    <script src="docs/js/all.js"></script>
+
+
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="docs/images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the API Documentation.</p>
+<!-- END_INFO -->
+<h1>general</h1>
+<!-- START_a925a8d22b3615f12fca79456d286859 -->
+<h2>Login</h2>
+<p> Get a JWT via given credentials. </p>
+          <aside class="warning">
+              <br>
+              You must replace <code> localhost </code> with localhost ip and port.
+              <br>
+          </aside>
+<aside class="warning">
+    <br>
+    The email and password must be registered, otherwise the method will return 401 Unauthorized error.
+    <br>
+</aside>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/auth/login"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/auth/login");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+        "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU1NTc2NzkyMCwiZXhwIjoxNTU1NzcxNTIwLCJuYmYiOjE1NTU3Njc5MjAsImp0aSI6ImdsMnIzNlR5VW43bHBSY0kiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.YnoSu6l0hq3mre1JKM-Je5s2CM2jx5gRwP5bBYvoCOo",
+    "token_type": "bearer",
+    "user": {
+        "id": 1,
+        "name": "Administrator",
+        "email": "admin@admin.com",
+        "email_verified_at": null,
+        "created_at": "2019-04-18 18:50:13",
+        "updated_at": "2019-04-18 18:50:13"
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/auth/login</code></p>
+<!-- END_a925a8d22b3615f12fca79456d286859 -->
+<!-- START_19ff1b6f8ce19d3c444e9b518e8f7160 -->
+<h2>Log out (Invalidate the token).</h2>
+<aside class="notice">
+    <br>
+    You must replace <code>{token}</code> with your personal API token.
+    <br>
+</aside>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/auth/logout" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/auth/logout");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/auth/logout</code></p>
+<!-- END_19ff1b6f8ce19d3c444e9b518e8f7160 -->
+<!-- START_994af8f47e3039ba6d6d67c09dd9e415 -->
+<h2>Refresh token.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/auth/refresh" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/auth/refresh");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/auth/refresh</code></p>
+<!-- END_994af8f47e3039ba6d6d67c09dd9e415 -->
+<!-- START_a47210337df3b4ba0df697c115ba0c1e -->
+<h2>Get the authenticated User.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/auth/me" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/auth/me");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "id": 1,
+    "name": "Administrator",
+    "email": "admin@admin.com",
+    "email_verified_at": null,
+    "created_at": "2019-04-17 17:03:09",
+    "updated_at": "2019-04-17 17:03:09"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/auth/me</code></p>
+<!-- END_a47210337df3b4ba0df697c115ba0c1e -->
+<!-- START_92d13aaaf47a4c3afdd46371cfc75b4b -->
+<h2>Execute an operative type Job.</h2>
+<aside class="notice">
+    <br>
+    Auto-generated values are set by functions, so there's no purpose on changing them.
+    <br>
+</aside>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/operative" \
+    -H "Authorization: Bearer {token}" \
+    -H "Content-Type: application/json" \
+    -d '{"origin":"IaiRdP1wTMXD63xz","mode":"C0b91qily1Digwzb","name":"EX3msrC90OPQXkN3","status":16,"attempts":14,"queue":"kstQI0ZJdUw2wTwW","job":"TSPG56wrHR2WebwX","delay":14,"type":"RdrO17fgaVBzq6Kk","id":14}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/operative");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "origin": "IaiRdP1wTMXD63xz",
+    "mode": "C0b91qily1Digwzb",
+    "name": "EX3msrC90OPQXkN3",
+    "status": 16,
+    "attempts": 14,
+    "queue": "kstQI0ZJdUw2wTwW",
+    "job": "TSPG56wrHR2WebwX",
+    "delay": 14,
+    "type": "RdrO17fgaVBzq6Kk",
+    "id": 14
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "origin": "not specified",
+    "mode": "under",
+    "name": "OfficeUpdate",
+    "status": 0,
+    "attempts": 1,
+    "queue": "in process",
+    "job": "in process",
+    "duration": 15,
+    "type": "operative",
+    "id": 6
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/operative</code></p>
+<h4>Body Parameters</h4>
+<table border="0">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="param-one">origin</td>
+<td>string</td>
+<td class="param-one">optional</td>
+<td>The origin of the Job instance.</td>
+</tr>
+<tr>
+<td class="param-two">mode</td>
+<td>string</td>
+<td class="param-two">required</td>
+<td>Defines the priority of a given Job.</td>
+</tr>
+<tr>
+<td class="param-two">name</td>
+<td>string</td>
+<td class="param-two">required</td>
+<td>Job name.</td>
+</tr>
+<tr>
+<td class="param-four">status</td>
+<td>integer</td>
+<td class="param-four">auto-generated</td>
+<td>Status of the Job.</td>
+</tr>
+<tr>
+<td class="param-four">attempts</td>
+<td>integer</td>
+<td class="param-four">auto-generated</td>
+<td>The amount of attempts accomplished until either success or failure of the Job.</td>
+</tr>
+<tr>
+<td class="param-three">queue</td>
+<td>string</td>
+<td class="param-three">not-required</td>
+<td>Inserts the Job in a Queue.</td>
+</tr>
+<tr>
+<td class="param-four">job</td>
+<td>string</td>
+<td class="param-four">auto-generated</td>
+<td>Status of the Job.</td>
+</tr>
+<tr>
+<td class="param-three">delay</td>
+<td>integer</td>
+<td class="param-three">not-required</td>
+<td>Defines the time the Job will wait to run. You can add time with numeric values.</td>
+</tr>
+<tr>
+<td class="param-four">type</td>
+<td>string</td>
+<td class="param-four">not-required</td>
+<td>Classifies the given job.</td>
+</tr>
+<tr>
+<td class="param-four">id</td>
+<td>integer</td>
+<td class="param-four">auto-generated</td>
+<td>Classifies Jobs by ID.</td>
+</tr>
+</tbody>
+</table>
+<!-- END_92d13aaaf47a4c3afdd46371cfc75b4b -->
+<!-- START_a6c1d0581bbc8c2ddee10d5d03396f21 -->
+<h2>Execute a Defender type Job.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/defender" \
+    -H "Authorization: Bearer {token}" \
+    -H "Content-Type: application/json" \
+    -d '{"fullscan":"ek8MjFYkOxg4Bq1Q","name":"1MC6hGgAEDKvk58G","status":12,"attempts":17,"queue":"lLZzfO01Nr46pSb6","job":"wdFrw4UrBpF3dVnI","delay":8,"type":"hMdFhXdEogTAfbL3","id":1}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/defender");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "fullscan": "ek8MjFYkOxg4Bq1Q",
+    "name": "1MC6hGgAEDKvk58G",
+    "status": 12,
+    "attempts": 17,
+    "queue": "lLZzfO01Nr46pSb6",
+    "job": "wdFrw4UrBpF3dVnI",
+    "delay": 8,
+    "type": "hMdFhXdEogTAfbL3",
+    "id": 1
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "fullscan": "true",
+    "name": "malware",
+    "status": 0,
+    "attempts": 2,
+    "queue": "in process",
+    "job": "in process",
+    "duration": 10,
+    "type": "defender",
+    "id": 2
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/defender</code></p>
+<h4>Body Parameters</h4>
+<table border="0">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="param-one">fullscan</td>
+<td>string</td>
+<td class="param-one">optional</td>
+<td>Defines priority and span of a given Job.</td>
+</tr>
+<tr>
+<td class="param-two">name</td>
+<td>string</td>
+<td class="param-two">required</td>
+<td>Job name.</td>
+</tr>
+<tr>
+<td class="param-four">status</td>
+<td>integer</td>
+<td class="param-four">auto-generated</td>
+<td>Status of the Job.</td>
+</tr>
+<tr>
+<td class="param-four">attempts</td>
+<td>integer</td>
+<td class="param-four">auto-generated</td>
+<td>The amount of attempts accomplished until either success or failure of the Job.</td>
+</tr>
+<tr>
+<td class="param-three">queue</td>
+<td>string</td>
+<td class="param-three">not-required</td>
+<td>Inserts the Job in a Queue.</td>
+</tr>
+<tr>
+<td class="param-four">job</td>
+<td>string</td>
+<td class="param-four">auto-generated</td>
+<td>Status of the Job.</td>
+</tr>
+<tr>
+<td class="param-three">delay</td>
+<td>integer</td>
+<td class="param-three">not-required</td>
+<td>Defines the time the Job will wait to run. You can add time with numeric values.</td>
+</tr>
+<tr>
+<td class="param-four">type</td>
+<td>string</td>
+<td class="param-four">not-required</td>
+<td>Classifies the given job.</td>
+</tr>
+<tr>
+<td class="param-four">id</td>
+<td>integer</td>
+<td class="param-four">auto-generated</td>
+<td>Classifies Jobs by ID.</td>
+</tr>
+</tbody>
+</table>
+<!-- END_a6c1d0581bbc8c2ddee10d5d03396f21 -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+
+
+  </body>
+</html>

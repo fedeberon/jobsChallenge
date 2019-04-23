@@ -1,0 +1,31 @@
+table th {
+	background-color: slategrey;
+	color: white;
+	font-weight: normal;
+}
+
+.bolivar-software {
+	padding-top: 10px;
+	margin: auto;
+}
+
+.bs-title {
+	padding-left: 40px;
+	color: white;
+}
+
+.param-one {
+	color: darkorange;
+}
+
+.param-two {
+	color: red;
+}
+
+.param-three {
+	color: green;
+}
+
+.param-four {
+    color: dimgrey;
+}

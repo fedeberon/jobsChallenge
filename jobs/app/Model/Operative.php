@@ -6,9 +6,12 @@ class Operative extends MyJob
 {
     //
 
-    private static $TYPE = 'OPERATIVE';
+    const ORIGIN = 'not specified';
+    const MODE = 'under';
+    const TYPE = 'operative';
 
-    protected $fillable = ['name', 'origin','duration', 'mode'];
+    protected $fillable = ['origin', 'mode'];
+
 
     function getType()
     {
@@ -16,8 +19,9 @@ class Operative extends MyJob
     }
 
     protected $defaults = array(
-        'origin' => "not specified",
-        'mode' => "under"
+        'origin' => 'not specified',
+        'mode' => 'under',
+        'type' => 'operative',
     );
 
     public function __construct(array $attributes = array())
@@ -28,9 +32,11 @@ class Operative extends MyJob
 
     function getSecondToProcess()
     {
-        if(is_null($this->duration)){
-            $this->duration = ($this->mode == "main") ? 5 : 15 ;
-        }
-        return $this->duration;
+        return ( is_null($this->delay) ?   $this->delay = ($this->mode == "main") ? 5 : 15  : $this->delay );
+    }
+
+    function run()
+    {
+        sleep($this->getSecondToProcess());
     }
 }

@@ -2,17 +2,36 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\ProcessJobs;
+use App\Interfaces\JobService;
 use App\Model\Defender;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Validator;
+
 
 class DefenderController extends Controller
 {
+
+
+    private $jobService;
+
+    /**
+     * DefenderController constructor.
+     * @param $jobService
+     */
+    public function __construct(JobService $jobService)
+    {
+        $this->jobService = $jobService;
+    }
+
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
         //
@@ -37,23 +56,31 @@ class DefenderController extends Controller
      */
     public function store(Request $request)
     {
-        //
 
-        $defender = new Defender;
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'delay' => 'sometimes|numeric'
+        ]);
 
+        if ($validator->fails()) {
+            return response()->json($validator->messages(), Response::HTTP_BAD_REQUEST);
+        }
+
+        $defender = new Defender();
         $defender->name = $request->name;
+        $defender->delay = $request->delay;
+        if($request->fullscan != null ) $defender->fullscan = $request->fullscan;
 
-        ProcessJobs::dispatch($defender)
-            ->onQueue('low')
-            ->delay(now()->addSeconds($defender->getSecondToProcess()));
+        $this->jobService->saveAndProcess($defender);
 
-        return $request->json('200','Job Defender was fire.');
+
+        return $request->json(Response::HTTP_OK, $defender);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Defender  $defender
+     * @param Defender $defender
      * @return \Illuminate\Http\Response
      */
     public function show(Defender $defender)
@@ -64,7 +91,7 @@ class DefenderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Defender  $defender
+     * @param Defender $defender
      * @return \Illuminate\Http\Response
      */
     public function edit(Defender $defender)
@@ -75,8 +102,8 @@ class DefenderController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Defender  $defender
+     * @param  \Illuminate\Http\Request $request
+     * @param Defender $defender
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Defender $defender)
