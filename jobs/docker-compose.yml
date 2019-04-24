@@ -45,7 +45,8 @@ services:
       - "3306:3306"
     environment:
       MYSQL_DATABASE: jobsChallenge
-      MYSQL_USER: root
+      MYSQL_USER: jobs
+      MYSQL_PASSWORD: jobs
       MYSQL_ROOT_PASSWORD: root
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
