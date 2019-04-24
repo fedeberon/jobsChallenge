@@ -10,7 +10,7 @@
 ## Requirements
 
 - **Git.**
-- **Docker** (docker compose).
+- **Docker 2.0.0.3 or superior** (docker compose).
 - **Postman.**
 - **Composer**
 
@@ -33,39 +33,29 @@ Once the project is download, get to the *jobsChallenge/jobs* path using `cd job
 To set up docker, run the following commands:
 <br/>
 <br/>
-	`composer install`
-<br/>
-<br/>
 	`docker-compose build`
 <br/>
 <br/>
-	`docker-compose up -d` *This command runs the application (The -d command runs the process in the background).* 
+	`docker-compose up -d` *The -d command runs the process in the background.*
 <br/>
 <br/>
-	`docker-compose exec app service supervisor start` *This command runs the service in background to throw the works.*
-<br/>
+	`docker-compose exec app service supervisor start` *This command runs the service in the background to throw the works.* 
 
 
-<br/>
-<br/>
-    `cp .env.example .env`
-<br/>
+
+`cp .env.example .env` *Copy the .env.example file into a new .env file*
 
 
-<br/>
-<br/>
-`docker-compose exec app php artisan key:generate` * Generete key to your user sessions and encrypted data remain secure. *
-<br/>
+`docker-compose exec app php artisan key:generate` *Generate key to your user sessions and encrypted data remain secure.* 
 
-<br/>
-<br/>
-`docker-compose exec app php artisan config:cache` * Cache settings. *
-<br/>
-<br/>
+
+`docker-compose exec app php artisan config:cache` *Cache settings.* 
 
 Done ! Your application is running.
 
-**http://127.0.0.1/**
+You can get to the home page at the following url.
+<br/>
+**http://127.0.0.1:8000/**
 
 <div id="additional-info"></div>
 
@@ -91,14 +81,17 @@ In order to execute a job you have to be authorized
 <br/>
 To register an user go to the following url
 <br/>
-**http://127.0.0.1/register**
+**http://{localhost}:{port}/register**
 <br/>
 <br/>
 You can obtain a token via logging in the user here:
 <br/>
-**http://127.0.0.1/api/auth/login**
+**http://{localhost}:{port}/api/auth/login**
 
 
 [*REST API Documentation*](http://127.0.0.1:8000/documentation)
+<br/>
+<br/>
+[*Postman collections*](https://es.stackoverflow.com/)
 
 
