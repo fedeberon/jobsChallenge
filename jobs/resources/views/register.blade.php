@@ -45,6 +45,10 @@
             list-style: none;
         }
 
+        button {
+            margin-right: 3px;
+        }
+
         .text-danger {
             color: #a94442;
         }

@@ -5,8 +5,11 @@ namespace App\Model;
 class Defender extends MyJob
 {
 
+
     public static $TYPE = 'DEFENDER';
+
     protected $fillable = ['fullscan'];
+
     protected $defaults = array(
         'fullscan' => false,
         'type' => 'defender',
@@ -33,8 +36,8 @@ class Defender extends MyJob
 
     function run()
     {
-        // TODO: Implement run() method.
-
         sleep($this->getSecondToProcess());
     }
+
+
 }

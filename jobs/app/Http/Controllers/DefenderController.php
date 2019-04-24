@@ -2,14 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Application;
-use App\Jobs\ProcessJobs;
+use App\Interfaces\JobService;
 use App\Model\Defender;
-use App\Model\Operative;
-use Carbon\Carbon;
-use Http\Services\JobServiceInterface;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpFoundation\Response;
 use Validator;
 
@@ -22,8 +17,9 @@ class DefenderController extends Controller
 
     /**
      * DefenderController constructor.
+     * @param $jobService
      */
-    public function __construct(JobServiceInterface $jobService)
+    public function __construct(JobService $jobService)
     {
         $this->jobService = $jobService;
     }
@@ -61,23 +57,22 @@ class DefenderController extends Controller
     public function store(Request $request)
     {
 
-            $validator = Validator::make($request->all(), [
-                'name' => 'required',
-                'delay' => 'sometimes|numeric'
-            ]);
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'delay' => 'sometimes|numeric'
+        ]);
 
-            if ($validator->fails()) {
-                return response()->json($validator->messages(), Response::HTTP_BAD_REQUEST);
-            }
+        if ($validator->fails()) {
+            return response()->json($validator->messages(), Response::HTTP_BAD_REQUEST);
+        }
 
-            $defender = new Defender();
-            $defender->name = $request->name;
-            $defender->delay = $request->delay;
+        $defender = new Defender();
+        $defender->name = $request->name;
+        $defender->delay = $request->delay;
+        if($request->fullscan != null ) $defender->fullscan = $request->fullscan;
 
-            if($request->fullscan != null ) $defender->fullscan = $request->fullscan;
+        $this->jobService->saveAndProcess($defender);
 
-            ProcessJobs::dispatch($defender)
-                    ->onQueue('low');
 
         return $request->json(Response::HTTP_OK, $defender);
     }
@@ -85,7 +80,7 @@ class DefenderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Defender  $defender
+     * @param Defender $defender
      * @return \Illuminate\Http\Response
      */
     public function show(Defender $defender)
@@ -96,7 +91,7 @@ class DefenderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Defender  $defender
+     * @param Defender $defender
      * @return \Illuminate\Http\Response
      */
     public function edit(Defender $defender)
@@ -107,8 +102,8 @@ class DefenderController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Defender  $defender
+     * @param  \Illuminate\Http\Request $request
+     * @param Defender $defender
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Defender $defender)
