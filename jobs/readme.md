@@ -10,7 +10,7 @@
 ## Requirements
 
 - **Git.**
-- **Docker** (docker compose).
+- **Docker 2.0.0.3 or superior** (docker compose).
 - **Postman.**
 - **Composer**
 
@@ -31,9 +31,6 @@ Once the project is download, get to the *jobsChallenge/jobs* path using `cd job
 ## Configuration of docker 
 
 To set up docker, run the following commands:
-<br/>
-<br/>
-	`composer install`
 <br/>
 <br/>
 	`docker-compose build`
@@ -78,5 +75,8 @@ You can obtain a token via logging in the user here:
 
 
 [*REST API Documentation*](http://127.0.0.1:8000/documentation)
+<br/>
+<br/>
+[*Postman routes*](http://blalba.com)
 
 
