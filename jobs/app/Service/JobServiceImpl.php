@@ -57,8 +57,11 @@ class JobServiceImpl implements JobService
     function saveAndProcess(MyJob $job)
     {
         // TODO: Implement save() method.
-        $queue = ( $job->queue != null ? $job->queue : 'default');
-        ProcessJobs::dispatch($job)->onQueue($queue);
+        $job->queue = ( $job->queue != null ? $job->queue : 'default');
+
+        ProcessJobs::dispatch($job)
+            ->onQueue($job->queue)
+            ->delay($job->getSecondToProcess());
     }
 
 }

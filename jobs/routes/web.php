@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 Route::resource('/documentation', 'DocumentationController');
 
+Route::resource('/documentation/statistics', 'DocumentationController@statistics');
+
+
 Route::get('/register', function () {
     return view('register');
 });
