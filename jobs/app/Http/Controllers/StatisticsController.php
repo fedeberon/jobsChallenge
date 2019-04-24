@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Interfaces\JobService;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
+use App\Interfaces\JobService;
 use Illuminate\Http\Response;
+use App\Http\Controllers\Controller;
 
-class MyJobController extends Controller
+class StatisticsController extends Controller
 {
-
 
     private $jobService;
 
@@ -22,52 +21,22 @@ class MyJobController extends Controller
         $this->jobService = $jobService;
     }
 
+    public function TotalJobs(){
 
+
+        $jobs = $this->jobService->TotalJobs();
+
+        return response()->json($jobs, Response::HTTP_OK);
+
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-
-    public function findBetweenDateTimes(Request $request){
-        $from = Carbon::parse($request->fromDateTime);
-        $to = Carbon::parse($request->toDateTime);
-        $jobs = $this->jobService->findBetweenDateTimes($from, $to);
-
-        return response()->json($jobs, Response::HTTP_OK);
-    }
-
-    public function findByType(Request $request){
-        $type = $request->type;
-        $jobs = $this->jobService->findByType($type);
-
-        return response()->json($jobs, Response::HTTP_OK);
-    }
-
-    public function findBetweenDateTimesAndType(Request $request){
-        $from = Carbon::parse($request->fromDateTime);
-        $to = Carbon::parse($request->toDateTime);
-        $type = $request->type;
-        $jobs = $this->jobService->findBetweenDateTimesAndType($from, $to, $type);
-
-        return response()->json($jobs, Response::HTTP_OK);
-    }
-    public function findBetweenDateTimesAndTypeAndStatus(Request $request){
-        $from = Carbon::parse($request->fromDateTime);
-        $to = Carbon::parse($request->toDateTime);
-        $type = $request->type;
-        $status = $request->status;
-
-        $jobs = $this->jobService->findBetweenDateTimesAndTypeAndStatus($from, $to, $type, $status);
-
-        return response()->json($jobs, Response::HTTP_OK);
-    }
-
     public function index()
     {
         //
-        return response()->json('MyJobController Index!', Response::HTTP_OK );
     }
 
     /**

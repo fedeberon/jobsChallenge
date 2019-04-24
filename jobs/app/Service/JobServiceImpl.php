@@ -54,6 +54,12 @@ class JobServiceImpl implements JobService
         return $this->jobRepository->findBetweenDateTimesAndType($from, $to, $type, $status);
     }
 
+    function TotalJobs()
+    {
+        // TODO: Implement TotalJobs() method.
+        return $this->jobRepository->TotalJobs();
+    }
+
     function saveAndProcess(MyJob $job)
     {
         // TODO: Implement save() method.

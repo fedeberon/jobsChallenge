@@ -41,6 +41,12 @@ class JobRepositoryImpl implements JobRepository
         return DB::table('jobs_events')->whereBetween('date', [$from, $to])->where('type',$type)->where('status',$status)->get();
     }
 
+    function TotalJobs()
+    {
+        // TODO: Implement findByType() method.
+        return DB::table('jobs_events')->count();
+    }
+
     function saveAndProcess(MyJob $job)
     {
         // TODO: Implement saveAndProcess() method.

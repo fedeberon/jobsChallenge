@@ -11,8 +11,9 @@ public function index(){
     return \File::get(public_path() . '/docs/api-documentation.html');
 }
 
-public function statics(){
+public function statistics(){
     return \File::get(public_path() . '/docs/statistics.html');
+
 }
 
 }

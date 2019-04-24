@@ -40,7 +40,7 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required',
             'password' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email|unique',
         ]);
 
 
@@ -49,9 +49,6 @@ class UserController extends Controller
             'password' => Hash::make($request->input('password')),
             'email' => $request->input('email')
         ]);
-
-        //$result=DB::insert("insert into users(name, password, email) values (?, ?, ?)", [$request->input('name'), $request->input('password'), $request->input('email')]);
-
 
         echo "Registered Successfully";
     }

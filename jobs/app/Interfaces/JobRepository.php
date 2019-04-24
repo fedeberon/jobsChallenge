@@ -21,4 +21,5 @@ interface JobRepository
 
     function saveAndProcess(MyJob $job);
 
+    function TotalJobs();
 }

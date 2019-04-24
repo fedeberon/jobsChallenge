@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::resource('/documentation', 'DocumentationController');
 
-Route::resource('/documentation/statistics', 'DocumentationController@statistics');
+Route::get('/documentation/statistics', 'StatisticsController@TotalJobs');
 
 
 Route::get('/register', function () {
@@ -26,6 +26,7 @@ Route::get('/register', function () {
 
 Route::post('/store', "UserController@store");
 
-Route::get('/statistics', function () {
-    return view('statistics');
-});
+
+//Route::get('/statistics', function () {
+//    return view('statistics');
+//});
