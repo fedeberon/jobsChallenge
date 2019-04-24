@@ -199,7 +199,6 @@ fetch(url, {
 <pre><code class="language-bash">curl -X POST "http://localhost/api/operative" \
     -H "Authorization: Bearer {token}" \
     -H "Content-Type: application/json" \
-    -d '{"origin":"IaiRdP1wTMXD63xz","mode":"C0b91qily1Digwzb","name":"EX3msrC90OPQXkN3","status":16,"attempts":14,"queue":"kstQI0ZJdUw2wTwW","job":"TSPG56wrHR2WebwX","delay":14,"type":"RdrO17fgaVBzq6Kk","id":14}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL("http://localhost/api/operative");
 
@@ -328,7 +327,6 @@ fetch(url, {
 <pre><code class="language-bash">curl -X POST "http://localhost/api/defender" \
     -H "Authorization: Bearer {token}" \
     -H "Content-Type: application/json" \
-    -d '{"fullscan":"ek8MjFYkOxg4Bq1Q","name":"1MC6hGgAEDKvk58G","status":12,"attempts":17,"queue":"lLZzfO01Nr46pSb6","job":"wdFrw4UrBpF3dVnI","delay":8,"type":"hMdFhXdEogTAfbL3","id":1}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL("http://localhost/api/defender");
 
@@ -441,6 +439,408 @@ fetch(url, {
 </tbody>
 </table>
 <!-- END_a6c1d0581bbc8c2ddee10d5d03396f21 -->
+<!-- START_edcfb920434477a8c770df60ebf09881 -->
+<h2>Get jobs by a given time frame.</h2>
+<p> You must specify two dates, with a slash between them, the given dates must follow this format (yyyy/mm/dd hh:mm:ss).</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/jobs/list/2019-04-18 19:27:00/2019-04-18 21:00:00/" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/jobs/list/{fromDateTime}/{toDateTime}");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+     {
+       "id": 8,
+       "queue": "low",
+       "job": "8 Illuminate\\Queue\\CallQueuedHandler@call",
+       "user": "admin@admin.com",
+       "name": "WINDOWS",
+       "type": "operative",
+       "delay": "15",
+       "date": "2019-04-18 19:27:11",
+       "start": "2019-04-18 20:56:06",
+       "finish": "2019-04-18 20:56:06",
+       "status": 1,
+       "attempts": 1,
+       "fullscan": null,
+       "origin": "not specified",
+       "mode": "under"
+   },
+   {
+       "id": 9,
+       "queue": "low",
+       "job": "9 Illuminate\\Queue\\CallQueuedHandler@call",
+       "user": "admin@admin.com",
+       "name": "McAffe",
+       "type": "defender",
+       "delay": "10",
+       "date": "2019-04-18 20:40:09",
+       "start": "2019-04-18 20:56:06",
+       "finish": "2019-04-18 20:56:06",
+       "status": 1,
+       "attempts": 1,
+       "fullscan": 0,
+       "origin": null,
+       "mode": null
+   },
+   {
+       "id": 10,
+       "queue": "low",
+       "job": "10 Illuminate\\Queue\\CallQueuedHandler@call",
+       "user": "admin@admin.com",
+       "name": "WINDOWS",
+       "type": "operative",
+       "delay": "15",
+       "date": "2019-04-18 20:40:15",
+       "start": "2019-04-18 20:56:07",
+       "finish": "2019-04-18 20:56:07",
+       "status": 1,
+       "attempts": 1,
+       "fullscan": null,
+       "origin": "not specified",
+       "mode": "under"
+   },
+   {
+       "id": 11,
+       "queue": "low",
+       "job": "11 Illuminate\\Queue\\CallQueuedHandler@call",
+       "user": "admin@admin.com",
+       "name": "LINUX",
+       "type": "operative",
+       "delay": "15",
+       "date": "2019-04-18 20:40:37",
+       "start": "2019-04-18 20:56:07",
+       "finish": "2019-04-18 20:56:07",
+       "status": 1,
+       "attempts": 1,
+       "fullscan": null,
+       "origin": "not specified",
+       "mode": "under"
+   },
+   {
+       "id": 12,
+       "queue": "in process",
+       "job": "in process",
+       "user": "admin@admin.com",
+       "name": "WINDOWS",
+       "type": "operative",
+       "delay": "15",
+       "date": "2019-04-18 20:56:36",
+       "start": null,
+       "finish": null,
+       "status": 0,
+       "attempts": 1,
+       "fullscan": null,
+       "origin": "not specified",
+       "mode": "under"
+   }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/jobs/list/{fromDateTime}/{toDateTime}</code></p>
+<!-- END_edcfb920434477a8c770df60ebf09881 -->
+<!-- START_d010a6a775eb5eee23ad9f6bedb99a0a -->
+<h2>Get jobs by type</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/jobs/list/defender" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/jobs/list/{type}");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+     {
+       "id": 9,
+       "queue": "low",
+       "job": "9 Illuminate\\Queue\\CallQueuedHandler@call",
+       "user": "admin@admin.com",
+       "name": "McAffe",
+       "type": "defender",
+       "delay": "10",
+       "date": "2019-04-18 20:40:09",
+       "start": "2019-04-18 20:56:06",
+       "finish": "2019-04-18 20:56:06",
+       "status": 1,
+       "attempts": 1,
+       "fullscan": 0,
+       "origin": null,
+       "mode": null
+   }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/jobs/list/{type}</code></p>
+<h4>Type Parameters</h4>
+<table border="0">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>defender</td>
+<td>A defender type job protects the system from external threats.</td>
+</tr>
+<tr>
+<td>operative</td>
+<td>An operative type job handles native processes of the system.</td>
+</tr>
+</tbody>
+</table>
+<!-- END_d010a6a775eb5eee23ad9f6bedb99a0a -->
+<!-- START_4f7827b57c7965b3e7e111a784fbd255 -->
+<h2>Get jobs by time frame and type.</h2>
+<aside class="notice">
+    <br>
+    Don't forget to follow this date format (yyyy/mm/dd hh:mm:ss).
+    <br>
+</aside>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/jobs/list/2019-04-18 19:27:00/2019-04-18 21:00:00/operative" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/jobs/list/{fromDateTime}/{toDateTime}/{type}");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    {
+       "id": 8,
+       "queue": "low",
+       "job": "8 Illuminate\\Queue\\CallQueuedHandler@call",
+       "user": "admin@admin.com",
+       "name": "WINDOWS",
+       "type": "operative",
+       "delay": "15",
+       "date": "2019-04-18 19:27:11",
+       "start": "2019-04-18 20:56:06",
+       "finish": "2019-04-18 20:56:06",
+       "status": 1,
+       "attempts": 1,
+       "fullscan": null,
+       "origin": "not specified",
+       "mode": "under"
+   },
+   {
+       "id": 10,
+       "queue": "low",
+       "job": "10 Illuminate\\Queue\\CallQueuedHandler@call",
+       "user": "admin@admin.com",
+       "name": "WINDOWS",
+       "type": "operative",
+       "delay": "15",
+       "date": "2019-04-18 20:40:15",
+       "start": "2019-04-18 20:56:07",
+       "finish": "2019-04-18 20:56:07",
+       "status": 1,
+       "attempts": 1,
+       "fullscan": null,
+       "origin": "not specified",
+       "mode": "under"
+   },
+   {
+       "id": 11,
+       "queue": "low",
+       "job": "11 Illuminate\\Queue\\CallQueuedHandler@call",
+       "user": "admin@admin.com",
+       "name": "LINUX",
+       "type": "operative",
+       "delay": "15",
+       "date": "2019-04-18 20:40:37",
+       "start": "2019-04-18 20:56:07",
+       "finish": "2019-04-18 20:56:07",
+       "status": 1,
+       "attempts": 1,
+       "fullscan": null,
+       "origin": "not specified",
+       "mode": "under"
+   },
+   {
+       "id": 12,
+       "queue": "in process",
+       "job": "in process",
+       "user": "admin@admin.com",
+       "name": "WINDOWS",
+       "type": "operative",
+       "delay": "15",
+       "date": "2019-04-18 20:56:36",
+       "start": null,
+       "finish": null,
+       "status": 0,
+       "attempts": 1,
+       "fullscan": null,
+       "origin": "not specified",
+       "mode": "under"
+   }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/jobs/list/{fromDateTime}/{toDateTime}/{type}</code></p>
+<!-- END_4f7827b57c7965b3e7e111a784fbd255 -->
+<!-- START_3b15dce7d5796f51e0f6c033846386fc -->
+<h2>Get jobs by time frame, type and status.</h2>
+<h4>Status Parameters</h4>
+<table border="0">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>In queue to process.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>In process.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Finished.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/jobs/list/2019-04-18 19:27:00/2019-04-18 21:00:00/operative/0" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/jobs/list/{fromDateTime}/{toDateTime}/{type}/{status}");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+     {
+       "id": 8,
+       "queue": "low",
+       "job": "8 Illuminate\\Queue\\CallQueuedHandler@call",
+       "user": "admin@admin.com",
+       "name": "WINDOWS",
+       "type": "operative",
+       "delay": "15",
+       "date": "2019-04-18 19:27:11",
+       "start": "2019-04-18 20:56:06",
+       "finish": "2019-04-18 20:56:06",
+       "status": 1,
+       "attempts": 1,
+       "fullscan": null,
+       "origin": "not specified",
+       "mode": "under"
+   },
+   {
+       "id": 10,
+       "queue": "low",
+       "job": "10 Illuminate\\Queue\\CallQueuedHandler@call",
+       "user": "admin@admin.com",
+       "name": "WINDOWS",
+       "type": "operative",
+       "delay": "15",
+       "date": "2019-04-18 20:40:15",
+       "start": "2019-04-18 20:56:07",
+       "finish": "2019-04-18 20:56:07",
+       "status": 1,
+       "attempts": 1,
+       "fullscan": null,
+       "origin": "not specified",
+       "mode": "under"
+   },
+   {
+       "id": 11,
+       "queue": "low",
+       "job": "11 Illuminate\\Queue\\CallQueuedHandler@call",
+       "user": "admin@admin.com",
+       "name": "LINUX",
+       "type": "operative",
+       "delay": "15",
+       "date": "2019-04-18 20:40:37",
+       "start": "2019-04-18 20:56:07",
+       "finish": "2019-04-18 20:56:07",
+       "status": 1,
+       "attempts": 1,
+       "fullscan": null,
+       "origin": "not specified",
+       "mode": "under"
+   },
+   {
+       "id": 12,
+       "queue": "in process",
+       "job": "in process",
+       "user": "admin@admin.com",
+       "name": "WINDOWS",
+       "type": "operative",
+       "delay": "15",
+       "date": "2019-04-18 20:56:36",
+       "start": null,
+       "finish": null,
+       "status": 0,
+       "attempts": 1,
+       "fullscan": null,
+       "origin": "not specified",
+       "mode": "under"
+   }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/jobs/list/{fromDateTime}/{toDateTime}/{type}/{status}</code></p>
+<!-- END_3b15dce7d5796f51e0f6c033846386fc -->
       </div>
       <div class="dark-box">
                         <div class="lang-selector">
