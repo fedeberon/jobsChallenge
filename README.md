@@ -51,7 +51,7 @@ To set up docker, run the following commands:
 
 `docker-compose exec app php artisan config:cache` *Cache settings.* 
 
-`docker-compose exec app php artisan:migrate`
+`docker-compose exec app php artisan migrate`
 
 Done ! Your application is running.
 
