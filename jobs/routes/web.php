@@ -23,3 +23,6 @@ Route::get('/register', function () {
 
 Route::post('/store', "UserController@store");
 
+Route::get('/statistics', function () {
+    return view('statistics');
+});
