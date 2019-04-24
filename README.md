@@ -34,8 +34,8 @@ To set up docker, run the following commands:
 
 
 `copy .env.example .env` *Copy the .env.example file into a new .env file*
-
-`cp .env.example .env` *For Linux*
+<br/>or
+<br/>`cp .env.example .env` *For Linux*
 
 
 `docker-compose build`
