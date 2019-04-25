@@ -64,36 +64,16 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Jobs challenge
-                </div>
-
-                <div class="links">
-                    <a href="/register" target="_blank"> Registration </a>
-                    <a href="/documentation" target="_blank"> REST API Documentation </a>
-                    <a href="/statistics" target="_blank"> Statistics </a>
-                    <a href="/example" target="_blank"> Stress test </a>
-                    <a href="https://github.com/fedeberon/jobsChallenge" target="_blank"> Repository </a>
-                    <a href="https://github.com/fedeberon/jobsChallenge#setting-up" target="_blank"> Readme </a>
-                    <a href="/about-us" target="_blank"> About us </a>
-                </div>
-            </div>
+    <div class="content">
+        <div class="title m-b-md">
+            Team members
         </div>
+        <h2> Ber&oacute;n Federico </h2>
+        <h2> Cort&eacute;s Lucas </h2>
+        <h2> Lescano Joaqu&iacute;n </h2>
+        <h2> Mu&ntilde;oz Enzo </h2>
+        <h2> Nabaes Erwin </h2>
+        <h2> Saez Dami&aacute;n </h2>
+    </div>
     </body>
 </html>
