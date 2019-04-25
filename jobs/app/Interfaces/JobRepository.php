@@ -19,6 +19,13 @@ interface JobRepository
 
     function findBetweenDateTimesAndTypeAndStatus($from, $to, $type, $status);
 
-    function saveAndProcess(MyJob $job);
+    function totalJobs();
 
+    function jobsProcess();
+
+    function jobsFinish();
+
+    function defenderJobs();
+
+    function operativeJobs();
 }

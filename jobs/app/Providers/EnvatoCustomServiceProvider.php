@@ -2,14 +2,11 @@
 
 namespace App\Providers;
 
-use App\Service\MyJobService;
+use Http\Services\JobServiceInterfaceImpl;
 use Illuminate\Support\ServiceProvider;
-use MyJobServiceImpl;
 
-class MyJobServiceProvider extends ServiceProvider
+class EnvatoCustomServiceProvider extends ServiceProvider
 {
-
-
     /**
      * Register services.
      *
@@ -19,9 +16,9 @@ class MyJobServiceProvider extends ServiceProvider
     {
         //
 
-        $this->app->bind('App\Interfaces\JobService', 'App\Service\JobServiceImpl');
-        $this->app->bind('App\Interfaces\JobRepository', 'App\Repository\JobRepositoryImpl');
-
+        $this->app->bind('\Http\Services\JobServiceInterface', function ($app) {
+            return new JobServiceInterfaceImpl();
+        });
     }
 
     /**
