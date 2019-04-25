@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Jobs challenge</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -81,17 +81,17 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    It Works!
+                    Jobs challenge
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="/register" target="_blank"> Registration </a>
+                    <a href="/documentation" target="_blank"> REST API Documentation </a>
+                    <a href="/statistics" target="_blank"> Statistics </a>
+                    <a href="/example" target="_blank"> Stress test </a>
+                    <a href="https://github.com/fedeberon/jobsChallenge" target="_blank"> Repository </a>
+                    <a href="https://github.com/fedeberon/jobsChallenge#setting-up" target="_blank"> Readme </a>
+                    <a href="/about-us" target="_blank"> About us </a>
                 </div>
             </div>
         </div>
