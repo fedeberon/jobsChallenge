@@ -33,7 +33,9 @@ Once the project is download, get to the *jobsChallenge/jobs* path using `cd job
 In order to set up docker, we made two executable files that run all the required commands automatically, this bash files are located in *jobs/executables* path.
 
 *Start.bat* or *.sh* file will set up the project in docker.
+
 *Supervisor.bat* or *.sh* file executes supervisor and the application.
+
 *Stop.bat* or *.sh* file terminates the execution.
 
 
