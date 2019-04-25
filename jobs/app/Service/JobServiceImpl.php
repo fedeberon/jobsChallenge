@@ -58,6 +58,11 @@ class JobServiceImpl implements JobService
         // TODO: Implement totalJobs() method.
         return $this->jobRepository->totalJobs();
     }
+    function inQueueJobs()
+    {
+        // TODO: Implement inQueueJobs() method.
+        return $this->jobRepository->inQueueJobs();
+    }
     function jobsProcess()
     {
         // TODO: Implement jobsProcess() method.

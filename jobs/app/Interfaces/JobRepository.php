@@ -28,4 +28,6 @@ interface JobRepository
     function defenderJobs();
 
     function operativeJobs();
+
+    function inQueueJobs();
 }

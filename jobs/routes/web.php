@@ -24,6 +24,10 @@ Route::get('/example', function () {
     return view('example');
 });
 
+Route::get('/about-us', function (){
+    return view('about-us');
+});
+
 Route::get('/register', function () {
     return view('register');
 });
