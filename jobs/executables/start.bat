@@ -64,6 +64,7 @@ docker-compose exec app php artisan config:cache
 @echo.
 echo Migrating Tables.
 @echo on
+timeout 20
 docker-compose exec app php artisan migrate
 
 @echo off
