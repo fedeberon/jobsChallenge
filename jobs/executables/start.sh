@@ -17,39 +17,39 @@ echo ""
 
 cd ..
 
-echo "################CREATING ENVIROMENT FILE###########"
+echo "################ CREATING ENVIROMENT FILE ###########"
 echo ""
 cp .env.example .env
 
 echo ""
- 
-echo "################BUILDING CONTAINERS###############"
+
+echo "################ BUILDING CONTAINERS ################"
 echo ""
 
-winpty docker-compose build
+docker-compose build
 echo ""
 
-echo "################STARTING UP SERVICES (db, webserver, app)###############"
+echo "##### STARTING UP SERVICES (db, webserver, app) #####"
 echo ""
 
-winpty docker-compose up -d
-echo ""
- 
-
-echo "################GENERATING KEY####################"
-winpty docker-compose exec app php artisan key:generate
+docker-compose up -d
 echo ""
 
 
-echo "################CONFIG CACHE######################"
-winpty docker-compose exec app php artisan config:cache
+echo "################ GENERATING KEY ######################"
+docker-compose exec app php artisan key:generate
 echo ""
- 
 
-echo "################MIGRATING TABLES#################"
+
+echo "################### CONFIG CACHE ######################"
+docker-compose exec app php artisan config:cache
 echo ""
- 
-winpty docker-compose exec app php artisan migrate
+
+
+echo "################ MIGRATING TABLES #################"
+echo ""
+sleep 20
+docker-compose exec app php artisan migrate
 
 echo "Done !"
 
