@@ -26,6 +26,8 @@ interface JobService
 
     function totalJobs();
 
+    function inQueueJobs();
+
     function jobsProcess();
 
     function jobsFinish();

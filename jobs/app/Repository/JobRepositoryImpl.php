@@ -46,6 +46,12 @@ class JobRepositoryImpl implements JobRepository
         // TODO: Implement totalJobs() method.
          return DB::table('jobs_events')->count();
     }
+    function inQueueJobs()
+    {
+        // TODO: Implement inQueueJobs() method.
+        return DB::table('jobs_events')->where('status',0)->count();
+    }
+
     function jobsProcess()
     {
         // TODO: Implement jobsProcess() method.
