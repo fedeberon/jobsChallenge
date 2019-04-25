@@ -1,4 +1,0 @@
-- Add tests for bindings and bindings prefixes
-- Add tests for config overrdes
-- Add tests for faker seed
-- Add tests on output
