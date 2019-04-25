@@ -86,7 +86,7 @@
 
                 <div class="links">
                     <a href="/documentation" target="_blank"> REST API Documentation </a>
-                    <a href="/documentation/statistics" target="_blank"> Statistics </a>
+                    <a href="/statistics" target="_blank"> Statistics </a>
                     <a href="https://github.com/fedeberon/jobsChallenge" target="_blank"> Repository </a>
                     <a href="https://github.com/fedeberon/jobsChallenge#setting-up" target="_blank"> Readme </a>
                 </div>

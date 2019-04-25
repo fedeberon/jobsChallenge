@@ -12,7 +12,6 @@ use App\Interfaces\JobRepository;
 use App\Interfaces\JobService;
 use App\Jobs\ProcessJobs;
 use App\Model\MyJob;
-use Illuminate\Support\Facades\DB;
 
 
 class JobServiceImpl implements JobService
@@ -54,10 +53,30 @@ class JobServiceImpl implements JobService
         return $this->jobRepository->findBetweenDateTimesAndType($from, $to, $type, $status);
     }
 
-    function TotalJobs()
+    function totalJobs()
     {
-        // TODO: Implement TotalJobs() method.
-        return $this->jobRepository->TotalJobs();
+        // TODO: Implement totalJobs() method.
+        return $this->jobRepository->totalJobs();
+    }
+    function jobsProcess()
+    {
+        // TODO: Implement jobsProcess() method.
+        return $this->jobRepository->jobsProcess();
+    }
+    function jobsFinish()
+    {
+        // TODO: Implement jobsFinish() method.
+        return $this->jobRepository->jobsFinish();
+    }
+    function defenderJobs()
+    {
+        // TODO: Implement defenderJobs() method.
+        return $this->jobRepository->defenderJobs();
+    }
+    function operativeJobs()
+    {
+        // TODO: Implement operativeJobs() method.
+        return $this->jobRepository->operativeJobs();
     }
 
     function saveAndProcess(MyJob $job)

@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Interfaces\JobService;
-use Illuminate\Http\Response;
-use App\Http\Controllers\Controller;
 
 class StatisticsController extends Controller
 {
@@ -21,14 +19,17 @@ class StatisticsController extends Controller
         $this->jobService = $jobService;
     }
 
-    public function TotalJobs(){
-
-
-        $jobs = $this->jobService->TotalJobs();
-
-        return response()->json($jobs, Response::HTTP_OK);
+    public function totalJobs(){
+        $totalJobs = $this->jobService->totalJobs();
+        $processJobs = $this->jobService->jobsProcess();
+        $finishJobs = $this->jobService->jobsFinish();
+        $defenderJobs = $this->jobService->defenderJobs();
+        $operativeJobs = $this->jobService->operativeJobs();
+        return view("statistics", ['totalJobs' => $totalJobs , "processJobs" => $processJobs , "finishJobs" => $finishJobs , "defenderJobs" =>$defenderJobs , "operativeJobs" =>$operativeJobs]);
 
     }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -37,6 +38,7 @@ class StatisticsController extends Controller
     public function index()
     {
         //
+        return view('statistics');
     }
 
     /**

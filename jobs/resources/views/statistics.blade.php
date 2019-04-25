@@ -43,32 +43,64 @@
             width: 64%;
             margin:auto;
         }
-        .counter{
-            width:150px;
-            height: 150px;
-            background: blue;
-            float: left;
-            margin: 10px;
-            position: relative;
-        }
-        h3{
-            position:absolute;
-            top:-50px;
-            left:0px;
 
+
+        .table-dark.table-bordered {
+            border: 0;
         }
+        .table-dark {
+            color: #fff;
+            background-color: #212529;
+        }
+        .table-dark, .table-dark>td, .table-dark>th {
+            background-color: #c6c8ca;
+        }
+
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 1rem;
+            background-color: transparent;
+            text-align: center;
+        }
+
+        .table-dark {
+            color: #fff;
+            background-color: #212529;
+        }
+        .table-bordered td, .table-bordered th {
+            border: 1px solid #dee2e6;
+        }
+
     </style>
 </head>
 <body>
+
+
 <div class="title m-b-md">
     Statistics
 </div>
 <div class="contain">
-    <div class="counter"><h3>Total</h3></div>
-    <div class="counter"><h3>Jobs Process</h3></div>
-    <div class="counter"><h3>Jobs Finish</h3></div>
-    <div class="counter"><h3>Defender Jobs</h3></div>
-    <div class="counter"><h3>Operative Jobs</h3></div>
+    <table class="table table-bordered table-dark">
+        <thead>
+        <tr>
+            <th><h3> Total</h3></th>
+            <th><h3> Jobs Process </h3></th>
+            <th><h3> Jobs Finish</h3></th>
+            <th><h3> Defender Jobs</h3></th>
+            <th><h3>Operative Jobs</h3></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><h3>{{$totalJobs}}</h3></td>
+            <td><h3>{{$processJobs}}</h3></td>
+            <td><h3>{{$finishJobs}}</h3></td>
+            <td><h3>{{$defenderJobs}}</h3></td>
+            <td><h3>{{$operativeJobs}}</h3></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 </body>
 </html>

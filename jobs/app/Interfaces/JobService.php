@@ -24,5 +24,13 @@ interface JobService
 
     function saveAndProcess(MyJob $job);
 
-    function TotalJobs();
+    function totalJobs();
+
+    function jobsProcess();
+
+    function jobsFinish();
+
+    function defenderJobs();
+
+    function operativeJobs();
 }
