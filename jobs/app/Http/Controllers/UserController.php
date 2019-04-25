@@ -50,9 +50,6 @@ class UserController extends Controller
             'email' => $request->input('email')
         ]);
 
-        //$result=DB::insert("insert into users(name, password, email) values (?, ?, ?)", [$request->input('name'), $request->input('password'), $request->input('email')]);
-
-
         echo "Registered Successfully";
     }
 
