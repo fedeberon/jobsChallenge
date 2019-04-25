@@ -81,10 +81,12 @@
     Statistics
 </div>
 <div class="contain">
+    <p>Description of table</p>
     <table class="table table-bordered table-dark">
         <thead>
         <tr>
             <th><h3> Total</h3></th>
+            <th><h3> In queue jobs</h3></th>
             <th><h3> Jobs in process </h3></th>
             <th><h3> Jobs finished </h3></th>
             <th><h3> Defender type jobs</h3></th>
@@ -94,6 +96,7 @@
         <tbody>
         <tr>
             <td><h3>{{$totalJobs}}</h3></td>
+            <td><h3>{{$inQueueJobs}}</h3></td>
             <td><h3>{{$processJobs}}</h3></td>
             <td><h3>{{$finishJobs}}</h3></td>
             <td><h3>{{$defenderJobs}}</h3></td>

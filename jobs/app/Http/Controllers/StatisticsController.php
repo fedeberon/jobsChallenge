@@ -25,7 +25,8 @@ class StatisticsController extends Controller
         $finishJobs = $this->jobService->jobsFinish();
         $defenderJobs = $this->jobService->defenderJobs();
         $operativeJobs = $this->jobService->operativeJobs();
-        return view("statistics", ['totalJobs' => $totalJobs , "processJobs" => $processJobs , "finishJobs" => $finishJobs , "defenderJobs" =>$defenderJobs , "operativeJobs" =>$operativeJobs]);
+        $inQueueJobs = $this->jobService->inQueueJobs();
+        return view("statistics", ['totalJobs' => $totalJobs , "processJobs" => $processJobs , "finishJobs" => $finishJobs , "defenderJobs" =>$defenderJobs , "operativeJobs" =>$operativeJobs , "inQueueJobs" => $inQueueJobs]);
 
     }
 
