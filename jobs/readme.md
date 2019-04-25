@@ -33,7 +33,7 @@ Once the project is download, get to the *jobsChallenge/jobs* path using `cd job
 To set up docker, run the following commands:
 
 
-`cp .env.example .env` *Copy the .env.example file into a new .env file*
+`copy .env.example .env` *Copy the .env.example file into a new .env file*
 <br/>or
 <br/>`cp .env.example .env` *For Linux*
 
