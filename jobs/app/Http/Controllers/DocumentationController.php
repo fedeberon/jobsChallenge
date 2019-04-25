@@ -8,16 +8,17 @@ class DocumentationController extends Controller
 {
 
 public function index(){
-    return \File::get(public_path() . '/docs/api-documentation.html');
+    return \File::get(public_path('/docs/api-documentation.html'));
 }
 
     public function create()
     {
         //
+
     }
 
     /**
-     * Store a newly created resource in storage.
+     * .
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -36,6 +37,7 @@ public function index(){
     public function show($id)
     {
         //
+
     }
 
     /**
@@ -47,6 +49,7 @@ public function index(){
     public function edit($id)
     {
         //
+
     }
 
     /**
@@ -59,6 +62,7 @@ public function index(){
     public function update(Request $request, $id)
     {
         //
+
     }
 
     /**
@@ -70,6 +74,7 @@ public function index(){
     public function destroy($id)
     {
         //
-    }
-}
 
+    }
+
+}
