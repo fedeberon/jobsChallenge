@@ -822,17 +822,17 @@
     },
     {
         "name": "laravel/framework",
-        "version": "v5.8.13",
-        "version_normalized": "5.8.13.0",
+        "version": "v5.8.14",
+        "version_normalized": "5.8.14.0",
         "source": {
             "type": "git",
             "url": "https://github.com/laravel/framework.git",
-            "reference": "837e3823e2274d22b8e281d093391b5d9c23029a"
+            "reference": "d1ba096bf809c7cbe6cb9624222326d75c92fd74"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laravel/framework/zipball/837e3823e2274d22b8e281d093391b5d9c23029a",
-            "reference": "837e3823e2274d22b8e281d093391b5d9c23029a",
+            "url": "https://api.github.com/repos/laravel/framework/zipball/d1ba096bf809c7cbe6cb9624222326d75c92fd74",
+            "reference": "d1ba096bf809c7cbe6cb9624222326d75c92fd74",
             "shasum": ""
         },
         "require": {
@@ -935,7 +935,7 @@
             "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^1.1).",
             "wildbit/swiftmailer-postmark": "Required to use Postmark mail driver (^3.0)."
         },
-        "time": "2019-04-18T15:28:45+00:00",
+        "time": "2019-04-23T13:22:19+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1464,17 +1464,17 @@
     },
     {
         "name": "mpociot/laravel-apidoc-generator",
-        "version": "3.4.4",
-        "version_normalized": "3.4.4.0",
+        "version": "3.5.0",
+        "version_normalized": "3.5.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/mpociot/laravel-apidoc-generator.git",
-            "reference": "ce75c2d05a9895c450ce41cfcf23b58d5e3aa865"
+            "reference": "aa163879382708ab99e2a8c08a780ff5f059bdb5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/mpociot/laravel-apidoc-generator/zipball/ce75c2d05a9895c450ce41cfcf23b58d5e3aa865",
-            "reference": "ce75c2d05a9895c450ce41cfcf23b58d5e3aa865",
+            "url": "https://api.github.com/repos/mpociot/laravel-apidoc-generator/zipball/aa163879382708ab99e2a8c08a780ff5f059bdb5",
+            "reference": "aa163879382708ab99e2a8c08a780ff5f059bdb5",
             "shasum": ""
         },
         "require": {
@@ -1497,7 +1497,7 @@
         "suggest": {
             "league/fractal": "Required for transformers support"
         },
-        "time": "2019-03-30T10:02:54+00:00",
+        "time": "2019-04-23T15:23:12+00:00",
         "type": "library",
         "extra": {
             "laravel": {
@@ -3244,17 +3244,17 @@
     },
     {
         "name": "sebastian/environment",
-        "version": "4.1.0",
-        "version_normalized": "4.1.0.0",
+        "version": "4.2.1",
+        "version_normalized": "4.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/environment.git",
-            "reference": "6fda8ce1974b62b14935adc02a9ed38252eca656"
+            "reference": "3095910f0f0fb155ac4021fc51a4a7a39ac04e8a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/6fda8ce1974b62b14935adc02a9ed38252eca656",
-            "reference": "6fda8ce1974b62b14935adc02a9ed38252eca656",
+            "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/3095910f0f0fb155ac4021fc51a4a7a39ac04e8a",
+            "reference": "3095910f0f0fb155ac4021fc51a4a7a39ac04e8a",
             "shasum": ""
         },
         "require": {
@@ -3266,11 +3266,11 @@
         "suggest": {
             "ext-posix": "*"
         },
-        "time": "2019-02-01T05:27:49+00:00",
+        "time": "2019-04-25T07:55:20+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "4.1-dev"
+                "dev-master": "4.2-dev"
             }
         },
         "installation-source": "dist",

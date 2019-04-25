@@ -81,16 +81,16 @@
     Statistics
 </div>
 <div class="contain">
-    <p>Description of table</p>
+    <p>This table enumerates the amount of jobs, with his respective status and types. The statistics are not in real-time, you have to refresh the webpage to get updated data.</p>
     <table class="table table-bordered table-dark">
         <thead>
         <tr>
-            <th><h3> Total</h3></th>
-            <th><h3> In queue jobs</h3></th>
+            <th><h3> Total </h3></th>
+            <th><h3> In queue jobs </h3></th>
             <th><h3> Jobs in process </h3></th>
             <th><h3> Jobs finished </h3></th>
-            <th><h3> Defender type jobs</h3></th>
-            <th><h3>Operative type jobs</h3></th>
+            <th><h3> Defender type jobs </h3></th>
+            <th><h3> Operative type jobs </h3></th>
         </tr>
         </thead>
         <tbody>
@@ -104,6 +104,7 @@
         </tr>
         </tbody>
     </table>
+    <p></p>
 </div>
 </body>
 </html>
