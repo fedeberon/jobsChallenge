@@ -50,7 +50,7 @@ class JobServiceImpl implements JobService
     function findBetweenDateTimesAndTypeAndStatus($from, $to, $type, $status)
     {
         // TODO: Implement findBetweenDateTimesAndTypeAndStatus() method.
-        return $this->jobRepository->findBetweenDateTimesAndType($from, $to, $type, $status);
+        return $this->jobRepository->findBetweenDateTimesAndTypeAndStatus($from, $to, $type, $status);
     }
 
     function totalJobs()
