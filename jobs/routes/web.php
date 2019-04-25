@@ -17,8 +17,12 @@ Route::get('/', function () {
 
 Route::resource('/documentation', 'DocumentationController');
 
-Route::resource('/documentation/statistics', 'DocumentationController@statistics');
 
+Route::get('/statistics', 'StatisticsController@totalJobs');
+
+Route::get('/example', function () {
+    return view('example');
+});
 
 Route::get('/register', function () {
     return view('register');

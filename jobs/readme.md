@@ -31,16 +31,32 @@ Once the project is download, get to the *jobsChallenge/jobs* path using `cd job
 ## Configuration of docker 
 
 To set up docker, run the following commands:
-<br/>
-<br/>
-	`docker-compose build`
-<br/>
-<br/>
-	`docker-compose up -d` *The -d command runs the process in the background.*
-<br/>
-<br/>
-	`docker-compose exec app service supervisor start` *This command runs the application*
 
+
+`copy .env.example .env` *Copy the .env.example file into a new .env file*
+<br/>or
+<br/>`cp .env.example .env` *For Linux*
+
+`docker-compose build`
+
+
+`docker-compose up -d` *The -d command runs the process in the background.*
+
+
+`docker-compose exec app service supervisor start` *This command runs the service in the background to start listener process works.* 
+
+
+`docker-compose exec app php artisan key:generate` *Generates a key to the user's session and encrypts the data in order to maintain system's security.*
+
+`docker-compose exec app php artisan config:cache` *Cache settings.* 
+
+`docker-compose exec app php artisan:migrate`
+
+Done ! Your application is running.
+
+You can get to the home page at the following url.
+<br/>
+**http://127.0.0.1/**
 
 <div id="additional-info"></div>
 
@@ -66,17 +82,13 @@ In order to execute a job you have to be authorized
 <br/>
 To register an user go to the following url
 <br/>
-**http://{localhost}:{port}/register**
+**http://127.0.0.1/register**
 <br/>
 <br/>
 You can obtain a token via logging in the user here:
 <br/>
-**http://{localhost}:{port}/api/auth/login**
+**http://127.0.0.1/api/auth/login**
 
 
-[*REST API Documentation*](http://127.0.0.1:8000/documentation)
-<br/>
-<br/>
-[*Postman routes*](http://blalba.com)
-
+[*REST API Documentation*](http://127.0.0.1/documentation)
 
