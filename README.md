@@ -30,7 +30,14 @@ Once the project is download, get to the *jobsChallenge/jobs* path using `cd job
 
 ## Configuration of docker 
 
-To set up docker, run the following commands:
+In order to set up docker, we made two executable files that run all the required commands automatically, this bash files are located in *jobs/executables* path.
+
+*Start.bat* or *.sh* file will set up the project in docker.
+*Supervisor.bat* or *.sh* file executes supervisor and the application.
+*Stop.bat* or *.sh* file terminates the execution.
+
+
+Alternatively you can do it by hand running the following commands:
 
 
 `copy .env.example .env` *Copy the .env.example file into a new .env file*
@@ -92,7 +99,4 @@ You can obtain a token via logging in the user here:
 
 
 [*REST API Documentation*](http://127.0.0.1/documentation)
-<br/>
-<br/>
-[*Postman collections*](https://es.stackoverflow.com/)
 
