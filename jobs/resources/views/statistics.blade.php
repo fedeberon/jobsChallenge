@@ -85,10 +85,10 @@
         <thead>
         <tr>
             <th><h3> Total</h3></th>
-            <th><h3> Jobs Process </h3></th>
-            <th><h3> Jobs Finish</h3></th>
-            <th><h3> Defender Jobs</h3></th>
-            <th><h3>Operative Jobs</h3></th>
+            <th><h3> Jobs in process </h3></th>
+            <th><h3> Jobs finished </h3></th>
+            <th><h3> Defender type jobs</h3></th>
+            <th><h3>Operative type jobs</h3></th>
         </tr>
         </thead>
         <tbody>
