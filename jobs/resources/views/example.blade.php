@@ -61,36 +61,68 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            header {
+                border-radius: 2px;
+            }
+
+            section {
+                border-radius: 2px;
+            }
+
+            h1 {
+                text-align: center;
+                margin-top: 5px;
+                padding: 10px;
+            }
+
+            h2 {
+                padding: 10px;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            h3 {
+                text-align: center;
+            }
+
+            .image-two {
+                width: 800px;
+                height: 551px;
+                background-image: url(images/graph-results.png);
+                background-size: 800px 551px;
+                margin: auto;
+            }
+
+            .image-three {
+                width: 800px;
+                height: 551px;
+                background-image: url(images/response-time-graph.png);
+                background-size: 800px 551px;
+                margin: auto;
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+        <header class="content">
+            <h1 class="title m-b-md">Stress test example</h1>
+        </header>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+        <section class="links">
+            <h2> Computer specifications </h2>
+            <p> Intel Core i5-7200U 2.50GHz CPU
+                <br/> 16GB RAM </p>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Jobs challenge
-                </div>
-
-                <div class="links">
-                    <a href="/documentation" target="_blank"> REST API Documentation </a>
-                    <a href="/example" target="_blank"> Stress test </a>
-                    <a href="https://github.com/fedeberon/jobsChallenge" target="_blank"> Repository </a>
-                    <a href="https://github.com/fedeberon/jobsChallenge#setting-up" target="_blank"> Readme </a>
-                </div>
+            <h3>Graph results</h3>
+            <div class="image-two">
             </div>
-        </div>
+
+            <h3>Response time graph</h3>
+            <div class="image-three">
+            </div>
+        </section>
     </body>
 </html>
