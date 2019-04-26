@@ -439,6 +439,52 @@ fetch(url, {
 </tbody>
 </table>
 <!-- END_a6c1d0581bbc8c2ddee10d5d03396f21 -->
+<!-- START_edcfb920434477a8c770df60ebf09882 -->
+<h2>Get a job by its id.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/jobs/list/2" \
+    -H "Authorization: Bearer {token}"</code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/jobs/list/{id}");
+
+let headers = {
+    "Authorization": "Bearer {token}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+     {
+       "id": 2,
+       "queue": "default",
+       "job": "in process",
+       "user": "damiansaez12@hotmail.com",
+       "name": "OfficeUpdate",
+       "type": "operative",
+       "delay": "3",
+       "date": "2019-04-26 11:39:57",
+       "start": null,
+       "finish": null,
+       "status": 0,
+       "attempts": 1,
+       "fullscan": null,
+       "origin": "not specified",
+       "mode": "under"
+   }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/jobs/list/{id}</code></p>
+<!-- END_edcfb920434477a8c770df60ebf09882 -->
 <!-- START_edcfb920434477a8c770df60ebf09881 -->
 <h2>Get jobs by a given time frame.</h2>
 <p> You must specify two dates, with a slash between them, the given dates must follow this format (yyyy/mm/dd hh:mm:ss).</p>
