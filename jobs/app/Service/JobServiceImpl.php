@@ -28,6 +28,11 @@ class JobServiceImpl implements JobService
         $this->jobRepository = $jobRepository;
     }
 
+    function findById($id)
+    {
+        // TODO: Implement findById() method.
+        return $this->jobRepository->findById($id);
+    }
 
     function findBetweenDateTimes($from, $to)
     {

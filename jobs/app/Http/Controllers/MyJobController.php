@@ -29,6 +29,12 @@ class MyJobController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function findById (Request $request){
+        $id = $request->id;
+        $jobs = $this->jobService->findById($id);
+
+        return response()->json($jobs, Response::HTTP_OK);
+    }
 
     public function findBetweenDateTimes(Request $request){
         $from = Carbon::parse($request->fromDateTime);

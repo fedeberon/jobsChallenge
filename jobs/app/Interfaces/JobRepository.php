@@ -10,6 +10,7 @@ namespace App\Interfaces;
 
 interface JobRepository
 {
+    function findById($id);
 
     function findBetweenDateTimes($from, $to);
 

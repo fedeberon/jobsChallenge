@@ -13,6 +13,7 @@ use App\Model\MyJob;
  */
 interface JobService
 {
+    function findById($id);
 
     function findBetweenDateTimes($from, $to);
 

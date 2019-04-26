@@ -26,6 +26,7 @@ class ProcessJobs implements ShouldQueue
     {
         //
         $this->myJob = $job;
+        $this->myJob->date = \Carbon\Carbon::now();
         $this->myJob->status = 0;
         $this->myJob->attempts = 1;
         $this->myJob->job = 'in process';

@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\DB;
 class JobRepositoryImpl implements JobRepository
 {
 
+    function findById($id)
+    {
+        // TODO: Implement findById() method.
+        return DB::table('jobs_events')->where('id',$id)->get();
+    }
 
     function findBetweenDateTimes($from, $to)
     {
